@@ -1,0 +1,39 @@
+{
+  "name": "Trumandev Craft Kit",
+  "version": "0.0.1",
+  "authors": [
+    "trumandev",
+    "mrtmr"
+  ],
+  "description": "A quick scaffold for Craft 2.3 with Bourbon & Neat",
+  "main": "public/assets/css/site.css",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "Craft-2.3",
+    "Gulp",
+    "Bourbon",
+    "Neat",
+    "Trumandev"
+  ],
+  "license": "MIT",
+  "homepage": "sincerelytruman.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.15"
+  },
+  "devDependencies": {
+    "neat": "~1.7.2",
+    "bourbon": "~4.2.2",
+    "jquery": "~2.1.3"
+  }
+}
