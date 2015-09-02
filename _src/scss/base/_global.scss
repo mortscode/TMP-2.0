@@ -1,0 +1,27 @@
+.-hide {
+  display: none;
+}
+
+.t-hide {
+  @include media($md) {
+    display: none;
+  }
+}
+
+.m-hide {
+  @include media($sm) {
+    display: none;
+  }
+}
+
+.tk-fade {
+  transition: opacity 200ms ease-out;
+
+  .wf-loading & {
+    opacity: 0;
+  }
+
+  .wf-active & {
+    opacity: 1;
+  }
+}

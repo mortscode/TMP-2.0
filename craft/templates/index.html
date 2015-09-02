@@ -20,7 +20,7 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
+	<!-- <h2>{{ entry.title }}</h2>
 
 	{{ entry.body }}
 
@@ -29,5 +29,5 @@
 		{% for entry in craft.entries.section('news').limit(5).find() %}
 			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
 		{% endfor %}
-	</ul>
+	</ul> -->
 {% endblock %}

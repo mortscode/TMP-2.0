@@ -65,7 +65,7 @@ gulp.task('scripts-min', function () {
 gulp.task('styles', function () {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
-      '_src/scss/main.scss'
+      '_src/scss/*.scss'
     ])
     .pipe($.changed('styles', {extension: '.scss'}))
     .pipe($.sass({

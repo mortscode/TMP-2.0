@@ -1,0 +1,28 @@
+.home-intro {
+
+  &__top {
+    background-color: $tmp-light;
+    display: block;
+    padding: $large-spacing 0;
+    width: 100%;
+
+    .logo-wrapper {
+      background-color: $tmp-brand;
+      display: block;
+      height: rem(40);
+      margin: 0 auto;
+      width: rem(570);
+    }
+  }
+
+  &__tagline {
+    background-color: $white;
+    color: $tmp-brand;
+    padding: $xl-spacing 0;
+    text-align: center;
+
+    .tagline-text {
+      margin-bottom: 0;
+    }
+  }
+}

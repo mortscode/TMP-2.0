@@ -14,24 +14,35 @@
 <head>
 	<meta charset="utf-8" />
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+
+	<script src="https://use.typekit.net/hqj3djf.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 	<link rel="home" href="{{ siteUrl }}" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
+	<section class="home-intro tk-fade">
+		<div class="home-intro__top">
+			<div class="logo-wrapper"></div>
+		</div>
+		<div class="home-intro__tagline">
+			<div class="grid">
+				<h1 class="tagline-text grid-6">Redefining proper for the modern homemaker.</h1>
+			</div>
+		</div>
+	</section>
+	<header>
+		<nav class="site-navigation">
+			
+		</nav>
+	</header>
+	
 	<div id="container">
-		<header id="header">
-			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
 
-			<nav>
-				<ul>
-					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main id="content" role="main">
+		<main id="content" role="main" class="grid">
 			{% block content %}
 				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
 				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
@@ -39,7 +50,7 @@
 		</main>
 
 		<footer id="footer">
-			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://buildwithcraft.com">Craft</a>
+			Copyright {{ now.year }} / {{ craft.request.serverName }}
 		</footer>
 	</div>
 </body>

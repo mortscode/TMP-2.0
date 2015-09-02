@@ -1,19 +1,19 @@
+@charset 'utf-8';
 
-@import '../bower/normalize-scss/normalize';
 @import '../bower/bourbon/app/assets/stylesheets/bourbon';
+@import 'base/variables';
 @import 'base/grid-settings';
+@import 'base/breakpoints';
 @import '../bower/neat/app/assets/stylesheets/neat';
+@import 'base/normalize';
 @import 'base/base';
 
 // COMPONENTS ============================================
-
+@import 'components/home-intro';
 
 // LAYOUT ================================================
+@import 'layout/main-layout';
 @import 'layout/header';
 @import 'layout/footer';
 
 // TEMPLATES =============================================
-
-body {
-  background-color: #eee;
-}

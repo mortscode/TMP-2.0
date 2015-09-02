@@ -1,0 +1,13 @@
+// scss-lint:disable VendorPrefix
+@mixin vertical-align($amt: 50%) {
+  position: relative;
+  top: $amt;
+  transform: translateY(-$amt);
+}
+
+@mixin vertical-reset {
+  position: relative;
+  top: auto;
+  transform: none;
+}
+// scss-lint:enable VendorPrefix
