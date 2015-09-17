@@ -1,6 +1,6 @@
 .aside-column {
   @include span-columns(3);
-  padding-right: $base-spacing;
+  padding: 0 $base-spacing;
 
   .about-tmp {
     .about-img {

@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
+  var navHeight = $('.site-header').outerHeight();
+
   var navpoint = $('.site-header').waypoint(function(direction) {
-    var navHeight = $('.site-header').outerHeight();
 
     if(direction === 'down'){
       console.log("down");
