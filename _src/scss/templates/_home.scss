@@ -1,0 +1,50 @@
+.home-posts {
+  @include span-columns(9);
+  @include omega;
+
+  .post-summary {
+    position: relative;
+    padding: $large-spacing 0;
+    border-bottom: 1px solid rgba($tmp-gray, 0.7);
+    width: 100%;
+
+    .post-image {
+      width: 60%;
+      background-color: $white;
+
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 135%;
+      }
+    }
+
+    .post-description {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 40%;
+      padding-left: $large-spacing;
+      float: right;
+      transform: translateY(-50%);
+
+      .post-date {
+        color: $tmp-gray;
+
+        &:before {
+          content: "";
+          display: inline-block;
+          height: 1px;
+          background-color: rgba($tmp-gray, 0.5);
+          width: $large-spacing;
+          margin-right: $small-spacing;
+          transform: translateY(-5px);
+        }
+      }
+
+      .post-link {
+        margin-top: $base-spacing;
+      }
+    }
+  }
+}

@@ -41,7 +41,7 @@ gulp.task('html', function(){
 // JS Hint & Uglify
 // Check JS for syntax errors, minify & move to public/assets
 gulp.task('scripts', function () {
-  return gulp.src('_src/scripts/*.js')
+  return gulp.src('_src/js/**/*.js')
     //check JS syntax
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
@@ -50,7 +50,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('scripts-min', function () {
-  return gulp.src('_src/scripts/*.js')
+  return gulp.src('_src/js/**/*.js')
     //check JS syntax
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
@@ -101,7 +101,7 @@ gulp.task('sync', ['styles', 'scripts'], function () {
 
   gulp.watch(['craft/templates/**/*.html'], reload);
   gulp.watch(['_src/scss/**/*.scss'], ['styles', reload]);
-  gulp.watch(['_src/scripts/**/*.js'], ['scripts', reload]);
+  gulp.watch(['_src/js/**/*.js'], ['scripts', reload]);
   gulp.watch(['public/assets/images/**/*'], ['images', reload]);
 });
 
@@ -113,7 +113,7 @@ gulp.task('default', ['styles', 'scripts', 'html'], function () {
 
   gulp.watch(['craft/templates/**/*.html'], ['html']);
   gulp.watch(['_src/scss/**/*.scss'], ['styles']);
-  gulp.watch(['_src/scripts/**/*.js'], ['scripts']);
+  gulp.watch(['_src/js/**/*.js'], ['scripts']);
   gulp.watch(['public/assets/images/**/*'], ['images']);
 });
 

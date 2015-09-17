@@ -8,5 +8,19 @@
  */
 
 return array(
+  '*' => array(
+    'omitScriptNameInUrls' => true,
+  ),
 
+  'craft.dev' => array(
+    'devMode' => true,
+    'environment' => 'local',
+    'siteUrl' => 'http://tmp.craft.dev'
+  ),
+
+  'themodernproper.com' => array(
+    'devMode' => false,
+    'environment' => 'prod',
+    'siteUrl' => 'http://themodernproper.com'
+  )
 );

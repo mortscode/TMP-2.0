@@ -23,10 +23,12 @@
 	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<body>
-	<section class="home-intro tk-fade">
+<body class="tk-fade">
+	<section class="home-intro">
 		<div class="home-intro__top">
-			<div class="logo-wrapper"></div>
+			<div class="logo-wrapper">
+				<img class="logotype" src="assets/img/brand/tmp-logotype.svg" onerror="this.onerror=null; this.src='assets/img/brand/tmp-logotype@2x.png'">
+			</div>
 		</div>
 		<div class="home-intro__tagline">
 			<div class="grid">
@@ -34,24 +36,46 @@
 			</div>
 		</div>
 	</section>
-	<header>
-		<nav class="site-navigation">
-			
+	<header id="header" class="site-header">
+		<a href="#">
+			<div class="tmp-logo-wrapper">
+				<img class="tmp-logo" src="assets/img/brand/tmp-logo.svg" onerror="this.onerror=null; this.src='assets/img/brand/tmp-logo.png'">
+			</div>
+		</a>
+		<nav class="navigation">
+			<ul class="nav-list">
+				<li class="search-wrapper"><img class="search-icon" src="assets/img/icons/search-icon.svg" onerror="this.onerror=null; this.src='assets/img/icons/search-icon.png'"></li>
+				<a href="#"><li class="nav-item">About</li></a>
+				<a href="#"><li class="nav-item">Shop</li></a>
+				<a href="#"><li class="nav-item">Archive</li></a>
+			</ul>
 		</nav>
+		<div class="social-links">
+			<ul class="social-list">
+				<a href="#" class="social-item"><li></li></a>
+				<a href="#" class="social-item"><li></li></a>
+				<a href="#" class="social-item"><li></li></a>
+				<a href="#" class="social-item"><li></li></a>
+			</ul>
+		</div>
 	</header>
-	
-	<div id="container">
 
-		<main id="content" role="main" class="grid">
-			{% block content %}
-				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-			{% endblock %}
-		</main>
+	<main id="content" role="main" class="grid">
+		{% block content %}
+			<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+		{% endblock %}
+	</main>
 
-		<footer id="footer">
-			Copyright {{ now.year }} / {{ craft.request.serverName }}
-		</footer>
-	</div>
+	<footer id="footer">
+		Copyright {{ now.year }} / {{ craft.request.serverName }}
+	</footer>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+  <script src="/assets/js/vendor/lazyload.js"></script>
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

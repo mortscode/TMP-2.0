@@ -7,18 +7,23 @@
     width: 100%;
 
     .logo-wrapper {
-      background-color: $tmp-brand;
       display: block;
-      height: rem(40);
+      height: rem(24);
       margin: 0 auto;
-      width: rem(570);
+      width: rem(420);
+      text-align: center;
+
+      .logotype {
+        height: 100%;
+        width: auto;
+      }
     }
   }
 
   &__tagline {
-    background-color: $white;
-    color: $tmp-brand;
-    padding: $xl-spacing 0;
+    background-color: rgba($white, 0.9);
+    color: $tmp-gray;
+    padding: $large-spacing 0 $base-spacing;
     text-align: center;
 
     .tagline-text {

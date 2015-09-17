@@ -3013,8 +3013,6 @@ Craft.BaseElementIndex = Garnish.Base.extend(
 	{
 		$source.parent('li').addClass('expanded');
 
-		this.$sidebar.trigger('resize');
-
 		var $childSources = this._getChildSources($source);
 		this._initSources($childSources);
 	},
@@ -3022,8 +3020,6 @@ Craft.BaseElementIndex = Garnish.Base.extend(
 	_collapseSource: function($source)
 	{
 		$source.parent('li').removeClass('expanded');
-
-		this.$sidebar.trigger('resize');
 
 		var $childSources = this._getChildSources($source);
 		this._deinitSources($childSources);
@@ -5873,8 +5869,6 @@ Craft.AssetIndex = Craft.BaseElementIndex.extend(
 
 					$targetFolder.parent().remove();
 					this._cleanUpTree($parentFolder);
-
-					this.$sidebar.trigger('resize');
 				}
 
 				if (textStatus == 'success' && data.error)
@@ -5965,8 +5959,6 @@ Craft.AssetIndex = Craft.BaseElementIndex.extend(
 		{
 			$parentFolder.siblings('ul').append($subFolder);
 		}
-
-		this.$sidebar.trigger('resize');
 	},
 
 	_cleanUpTree: function($parentFolder)
@@ -9129,11 +9121,6 @@ Craft.Grid = Garnish.Base.extend(
 
 		// Adjust them when the container is resized
 		this.addListener(this.$container, 'resize', 'refreshCols');
-
-		// Trigger a window resize event in case anything needs to adjust itself, now that the items are layed out.
-		Garnish.requestAnimationFrame(function() {
-			Garnish.$win.trigger('resize');
-		});
 	},
 
 	addItems: function(items)

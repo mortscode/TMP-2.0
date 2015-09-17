@@ -15,7 +15,7 @@
 }
 
 .tk-fade {
-  transition: opacity 200ms ease-out;
+  transition: opacity 400ms ease-out;
 
   .wf-loading & {
     opacity: 0;
@@ -24,4 +24,8 @@
   .wf-active & {
     opacity: 1;
   }
+}
+
+.no-wrap {
+  white-space: nowrap;
 }
