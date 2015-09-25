@@ -2,8 +2,9 @@
   background-color: rgba($white, 0.98);
   position: relative;
   z-index: $z-nav;
+  height: em(80);
 
-  &.is-fixed {
+  &.stuck {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,14 +17,15 @@
 
   .tmp-logo-wrapper {
     position: absolute;
-    left: $large-spacing;
-    top: $small-spacing;
-    height: em(90);
-    width: em(90);
+    left: 50%;
+    top: 25%;
+    height: em(85);
+    width: em(85);
     border-radius: em(50);
-    background-color: rgba($tmp-dark, 0.7);
+    background-color: rgba($tmp-gray, 0.95);
     text-align: center;
     opacity: 0;
+    transform: translateX(-50%);
     transition: opacity $quick-ease;
 
     .tmp-logo {
@@ -37,7 +39,11 @@
   }
 
   .navigation {
-    text-align: center;
+    text-align: left;
+    position: absolute;
+    left: $large-spacing;
+    top: 50%;
+    transform: translateY(-50%);
 
     .nav-list {
 
@@ -97,7 +103,7 @@
         margin-left: $small-spacing;
 
         &:hover {
-          background-color: $tmp-dark;
+          background-color: $tmp-gray;
         }
       }
     }

@@ -1,8 +1,32 @@
 .aside-column {
-  @include span-columns(3);
-  padding: 0 $base-spacing;
+
+  &.left {
+    @include span(5 of 24 at 2);
+    padding: $large-spacing 0;
+    transition: all $quick-ease;
+
+    @include breakpoint($vp4) {
+      @include span(6 of 24);
+    }
+  }
+
+  &.right {
+    @include span(2 of 12);
+    padding: $large-spacing $base-spacing;
+    transition: all $quick-ease;
+
+    .about-blurb {
+      font-size: rem(12);
+    }
+  }
 
   .about-tmp {
+    .logo-wrapper {
+      width: 100%;
+      height: auto;
+      margin: 0 auto $small-spacing;
+    }
+
     .about-img {
       background-image: url("../img/brand/tmp-photo.jpg");
       background-repeat: no-repeat;

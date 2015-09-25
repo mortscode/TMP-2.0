@@ -43,7 +43,12 @@
   &.aside {
     text-align: center;
     width: 100%;
-    font-size: rem(14);
+    padding: $small-spacing 0;
+    font-size: rem(12);
+  }
+
+  &.small {
+    font-size: rem(12);
   }
 
   &:disabled {

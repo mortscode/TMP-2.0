@@ -1,16 +1,21 @@
 @charset "utf-8";
 
+@import "../bower/susy/sass/susy";
+@import "../bower/compass-breakpoint/stylesheets/breakpoint";
 @import "../bower/bourbon/app/assets/stylesheets/bourbon";
 @import "base/variables";
-@import "base/grid-settings";
-@import "base/breakpoints";
-@import "../bower/neat/app/assets/stylesheets/neat";
+// @import "base/grid-settings";
+// @import "base/breakpoints";
+// @import "../bower/neat/app/assets/stylesheets/neat";
 @import "base/normalize";
 @import "base/base";
 
 // COMPONENTS ============================================
 @import "components/home-intro";
 @import "components/aside";
+@import "components/share";
+@import "components/post-intro";
+@import "components/post-builder";
 
 // LAYOUT ================================================
 @import "layout/main-layout";

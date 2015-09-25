@@ -1,13 +1,9 @@
 .grid {
-  @include outer-container;
-  padding: 0 $base-spacing;
+  @include container();
+  @include clearfix;
+  // padding: 0 $base-spacing;
 
   &.-rel {
     position: relative;
-  }
-
-  .grid-6 {
-    @include span-columns(6);
-    @include shift(3);
   }
 }

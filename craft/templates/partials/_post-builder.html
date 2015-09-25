@@ -1,0 +1,24 @@
+<div class="builder">
+  {% for block in entry.postBuilder %}
+
+    {% if block.type == "textBlock" %}
+      <div class="builder__section top-{{ block.paddingTop}} bot-{{ block.paddingBottom}}">
+        <div class="builder__section--text {{ block.position }}">
+          {{ block.text }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.type == "callout" %}
+      <div class="builder__section top-{{ block.paddingTop}} bot-{{ block.paddingBottom}}">
+        <div class="builder__section--callout">
+          <blockquote class="text {{ block.textColor }}">{{ block.text }}</blockquote>
+          {% if block.cite|length %}
+            <p class="cite {{ block.textColor }}">~ {{ block.cite }}</span>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+  {% endfor %}
+</div>

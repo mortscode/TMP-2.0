@@ -1,0 +1,64 @@
+.post {
+  @include span(10 wide);
+  padding: $large-spacing $base-spacing;
+  margin-top: $large-spacing;
+  position: relative;
+
+  &__title {
+    @include full;
+    @include clearfix;
+    margin-bottom: $large-spacing;
+    position: relative;
+
+    &--date {
+      color: $tmp-gray;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 1px;
+        background-color: rgba($tmp-gray, 0.5);
+        width: $large-spacing;
+        margin-right: $small-spacing;
+        transform: translateY(-5px);
+      }
+    }
+
+    &--text {
+      @include span(5);
+      margin-bottom: 0;
+    }
+  }
+
+  &__share {
+    @include span(2 wide);
+
+    &--download {
+      width: 100%;
+      padding: $small-spacing 0;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &--wrapper {
+      @include span(8 wide);
+      @include push(1);
+      position: relative;
+      background-color: $white;
+
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 150%;
+      }
+    }
+  }
+}

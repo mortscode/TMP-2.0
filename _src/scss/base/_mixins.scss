@@ -11,3 +11,7 @@
   transform: none;
 }
 // scss-lint:enable VendorPrefix
+
+@mixin debug($color: tomato, $type: solid) {
+  border: 1px $type $color;
+}

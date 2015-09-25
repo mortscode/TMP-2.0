@@ -21,42 +21,25 @@
 
 {% block content %}
 <div class="grid">
-	<aside class="aside-column">
-    <section class="about-tmp">
-      <div class="about-img"></div>
-      <h3>Natalie Mortimer <span class="no-wrap">& Holly Erickson</span></h3>
-      <p class="about-blurb caption">Quis aute iure reprehenderit in voluptate velit esse. Idque Caesaris facere voluntate liceret: sese habere.</p>
-      <div class="btn aside gray">About us</div>
-    </section>
-  </aside>
+
+  {% set vars = {'align' : 'left'} %}
+  {% include 'partials/_aside' with vars %}
+
   <div class="home-posts">
-    <article class="post-summary">
-      <div class="post-image"></div>
-      <div class="post-description">
-        <h3 class="post-date">August 22, 2015</h3>
-        <h2 class="post-title">Awesome blog post title</h2>
-        <p class="post-blurb">Phasellus laoreet lorem vel dolor tempus vehicula. Integer legentibus erat a ante historiarum dapibus. Hi omnes lingua, institutis, legibus inter se differunt. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Quisque ut dolor gravida, placerat libero vel, euismod.</p>
-        <a href="#" class="post-link btn pop">Read more</a>
-      </div>
-    </article>
-    <article class="post-summary">
-      <div class="post-image"></div>
-      <div class="post-description">
-        <h3 class="post-date">August 22, 2015</h3>
-        <h2 class="post-title">Awesome blog post title</h2>
-        <p class="post-blurb">Phasellus laoreet lorem vel dolor tempus vehicula. Integer legentibus erat a ante historiarum dapibus. Hi omnes lingua, institutis, legibus inter se differunt. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Quisque ut dolor gravida, placerat libero vel, euismod.</p>
-        <a href="#" class="post-link btn pop">Read more</a>
-      </div>
-    </article>
-    <article class="post-summary">
-      <div class="post-image"></div>
-      <div class="post-description">
-        <h3 class="post-date">August 22, 2015</h3>
-        <h2 class="post-title">Awesome blog post title</h2>
-        <p class="post-blurb">Phasellus laoreet lorem vel dolor tempus vehicula. Integer legentibus erat a ante historiarum dapibus. Hi omnes lingua, institutis, legibus inter se differunt. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Quisque ut dolor gravida, placerat libero vel, euismod.</p>
-        <a href="#" class="post-link btn pop">Read more</a>
-      </div>
-    </article>
+
+    {% set posts = craft.entries.section('posts') %}
+    {% for post in posts %}
+      <article class="post-summary">
+        <div class="post-image-wrapper"><a href="{{ post.url }}"><img class="post-image" src="{{ post.featuredImage.first.url }}" alt=""></a></div>
+        <div class="post-description">
+          <h3 class="post-date">{{ post.postDate|date("F j, Y") }}</h3>
+          <a href="{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a>
+          <p class="post-blurb">{{ post.postSummary }}</p>
+          <a href="{{ post.url }}" class="post-link btn gray">Read more</a>
+        </div>
+      </article>
+    {% endfor %}
+
   </div>
 </div>
 {% endblock %}

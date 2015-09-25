@@ -1,31 +1,48 @@
 .home-posts {
-  @include span-columns(9);
-  @include omega;
+  @include span(8 at 5);
 
   .post-summary {
+    @include clearfix;
     position: relative;
     padding: $large-spacing 0;
     border-bottom: 1px solid rgba($tmp-gray, 0.7);
     width: 100%;
 
-    .post-image {
-      width: 50%;
+    .post-title {
+      transition: color $quick-ease;
+      color: darken($tmp-gray, 20%);
+
+      &:hover {
+        color: $tmp-gray;
+        text-decoration: none;
+      }
+    }
+
+    .post-image-wrapper {
+      @include span(6);
+      position: relative;
       background-color: $white;
 
       &:after {
         content: "";
         display: block;
-        padding-bottom: 135%;
+        padding-bottom: 150%;
+      }
+
+      .post-image {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
       }
     }
 
     .post-description {
+      @include span(10 of 24 at 14);
       position: absolute;
       top: 50%;
-      right: 0;
-      width: 50%;
-      padding-left: $large-spacing;
-      float: right;
       transform: translateY(-50%);
 
       .post-date {

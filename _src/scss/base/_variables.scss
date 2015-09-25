@@ -41,7 +41,7 @@ $action-color: $tmp-brand;
 $quick-ease: 250ms ease-in-out;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: rgba($tmp-gray, 0.5);
 $base-border: 1px solid $base-border-color;
 
 // Forms
@@ -50,3 +50,5 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 
 // z-index
 $z-nav: 500;
+$z-post-title: 100;
+$z-post-content: 50;

@@ -42,6 +42,13 @@ h3 {
   font-weight: 400;
 }
 
+h4 {
+  font-size: rem(16);
+  line-height: rem(21);
+  font-weight: 600;
+  font-family: $sans;
+}
+
 p {
   font-size: rem(18);
   margin: 0 0 $small-spacing;
@@ -56,11 +63,16 @@ a {
   color: $action-color;
   text-decoration: none;
   transition: color 0.1s linear;
+  font-weight: 600;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    color: lighten($action-color, 10%);
+
+    .builder & {
+      text-decoration: underline;
+    }
   }
 
   &:active,
@@ -69,12 +81,31 @@ a {
   }
 }
 
+blockquote {
+  font-size: rem(48);
+  line-height: rem(60);
+  font-style: italic;
+  font-weight: 600;
+  color: $tmp-gray;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.cite {
+  font-size: rem(24);
+  line-height: rem(30);
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+}
+
 hr {
   border-bottom: $base-border;
   border-left: 0;
   border-right: 0;
   border-top: 0;
-  margin: $base-spacing 0;
+  margin: $large-spacing 0 0;
 }
 
 img,

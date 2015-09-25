@@ -1,0 +1,28 @@
+{#
+ # News entry template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	<div class="grid">
+    <article class="post">
+      <div class="post__title">
+        <h3 class="post__title--date">{{ entry.postDate.format('F d, Y') }}</h3>
+        <h1 class="post__title--text">{{ entry.title }}</h1>
+      </div>
+      <div class="post__share">
+        <div class="post__share--download btn gray small">Download Recipe</div>
+        {% include 'partials/_share' %}
+      </div>
+      <div class="post__image--wrapper">
+        <img src="{{ entry.featuredImage.first.url }}" alt="" class="post__image">
+      </div>
+      {% include 'partials/_post-builder' %}
+    </article>
+      
+    {% set vars = {'align' : 'right'} %}
+    {% include 'partials/_aside' with vars %}
+  </div>
+{% endblock %}

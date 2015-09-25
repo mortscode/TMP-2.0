@@ -1,0 +1,87 @@
+.builder {
+  @include full;
+
+  &__section {
+    @include clearfix;
+    display: block;
+
+    &.top-none {
+      padding-top: 0;
+    }
+
+    &.top-normal {
+      padding-top: $base-spacing;
+    }
+
+    &.top-double {
+      padding-top: $large-spacing;
+    }
+
+    &.bot-none {
+      padding-bottom: 0;
+    }
+
+    &.bot-normal {
+      padding-bottom: $base-spacing;
+    }
+
+    &.bot-double {
+      padding-bottom: $large-spacing;
+    }
+
+    &--text {
+
+      &.center {
+        @include span(6 wide);
+        @include push(4);
+      }
+
+      &.left {
+        @include span(6);
+      }
+
+      &.right {
+        @include span(last 6);
+      }
+
+      &.full {
+        @include span(10);
+        @include push(2);
+      }
+    }
+
+    &--callout {
+      @include span(8);
+      @include push(3);
+      text-align: center;
+
+      &.gray {
+        color: $tmp-gray;
+      }
+
+      &.dark {
+        color: $tmp-dark;
+      }
+
+      &.red {
+        color: $tmp-brand;
+      }
+
+      .cite {
+        margin-top: $small-spacing;
+
+        &.gray {
+          color: $tmp-gray;
+        }
+
+        &.dark {
+          color: $tmp-dark;
+        }
+
+        &.red {
+          color: $tmp-brand;
+        }
+      }
+    }
+  }
+}

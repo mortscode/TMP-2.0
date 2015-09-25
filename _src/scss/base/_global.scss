@@ -1,18 +1,28 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .-hide {
   display: none;
 }
 
-.t-hide {
-  @include media($md) {
-    display: none;
-  }
-}
+// .t-hide {
+//   @include media($md) {
+//     display: none;
+//   }
+// }
 
-.m-hide {
-  @include media($sm) {
-    display: none;
-  }
-}
+// .m-hide {
+//   @include media($sm) {
+//     display: none;
+//   }
+// }
 
 .tk-fade {
   transition: opacity 400ms ease-out;

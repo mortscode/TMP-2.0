@@ -1,0 +1,14 @@
+<aside class="aside-column {{ align }}">
+  <section class="about-tmp">
+    {% set pageUrl = url(craft.request.path) %}
+    {% if pageUrl != siteUrl %}
+      <div class="logo-wrapper">
+        <img class="logotype" src="/assets/img/brand/tmp-logotype.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logotype@2x.png'">
+      </div>
+    {% endif %}
+    <div class="about-img"></div>
+    <h3>Natalie Mortimer <span class="no-wrap">& Holly Erickson</span></h3>
+    <p class="about-blurb caption">Quis aute iure reprehenderit in voluptate velit esse. Idque Caesaris facere voluntate liceret: sese habere.</p>
+    <div class="btn aside gray">About us</div>
+  </section>
+</aside>

@@ -1,0 +1,54 @@
+.share {
+  margin-top: $large-spacing;
+  width: 100%;
+  text-align: center;
+
+  &__title {
+    @include clearfix;
+    display: inline-block;
+    color: $tmp-gray;
+    padding: 0 $small-spacing / 2;
+    background-color: $tmp-light;
+    margin-bottom: 0;
+
+    &--line {
+      margin-top: $small-spacing;
+      margin-bottom: -14px;
+      border-bottom: 1px solid rgba($tmp-gray, 0.5);
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    background-color: $tmp-gray;
+    color: $white;
+    width: 25%;
+    max-width: $large-spacing;
+    margin: $base-spacing 3%;
+    border-radius: 100%;
+    transition: background-color $quick-ease;
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &--wrapper {
+      @include full;
+    }
+
+    .icon-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: rem(18);
+    }
+
+    &:hover {
+      background-color: rgba($tmp-dark, 0.8);
+    }
+  }
+}
