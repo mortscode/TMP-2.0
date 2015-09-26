@@ -12,17 +12,13 @@ html {
   display: none;
 }
 
-// .t-hide {
-//   @include media($md) {
-//     display: none;
-//   }
-// }
+.no-scroll {
+  overflow: hidden;
 
-// .m-hide {
-//   @include media($sm) {
-//     display: none;
-//   }
-// }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
 
 .tk-fade {
   transition: opacity 400ms ease-out;

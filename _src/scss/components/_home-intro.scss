@@ -6,12 +6,25 @@
     padding: $large-spacing 0;
     width: 100%;
 
+    @include breakpoint($vp3) {
+      padding: em(30) 0;
+    }
+
+    @include breakpoint($vp2) {
+      padding: em(14) 0 em(16);
+    }
+
     .logo-wrapper {
       display: block;
       height: rem(21);
       margin: 0 auto;
       width: rem(420);
       text-align: center;
+
+      @include breakpoint($vp2) {
+        height: rem(14);
+        width: rem(210);
+      }
 
       .logotype {
         height: 100%;
@@ -21,15 +34,30 @@
   }
 
   &__tagline {
+    z-index: $z-post-content;
     background-color: rgba($white, 0.9);
     color: $tmp-gray;
     padding: em(70) 0 0;
+
+    @include breakpoint($vp2) {
+      padding: em(40) 0 0;
+    }
 
     .tagline-text {
       @include span(6);
       @include push(3);
       margin-bottom: 0;
       text-align: center;
+
+      @include breakpoint($vp3) {
+        @include span(8);
+        @include push(2);
+      }
+
+      @include breakpoint($vp2) {
+        @include span(10);
+        @include push(1);
+      }
     }
   }
 }

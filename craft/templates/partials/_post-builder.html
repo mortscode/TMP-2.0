@@ -12,10 +12,45 @@
     {% if block.type == "callout" %}
       <div class="builder__section top-{{ block.paddingTop}} bot-{{ block.paddingBottom}}">
         <div class="builder__section--callout">
-          <blockquote class="text {{ block.textColor }}">{{ block.text }}</blockquote>
+          <hr class="bq-hr top">
+          <blockquote class="text {{ block.textColor }} js-avoid-orphan">{{ block.text }}</blockquote>
           {% if block.cite|length %}
             <p class="cite {{ block.textColor }}">~ {{ block.cite }}</span>
           {% endif %}
+          <hr class="bq-hr bot">
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.type == "photos" %}
+      <div class="builder__section top-{{ block.paddingTop}} bot-{{ block.paddingBottom}}">
+        <div class="builder__section--photos {{ block.photoWidth }}">
+          {% for photo in block.imageFiles %}
+              <div class="image-wrapper {% if block.imageFiles|length >= 2 %}gallery{% endif %} {% if block.mobileStack.contains('stack') %}m-stack{% endif %}">
+                <img class="image" src="{{ photo.url }}" alt="">
+              </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block.type == "recipe" %}
+      <div class="builder__section top-normal bot-normal">
+        <div class="builder__section--ingredients">
+          <h3 class="ingredients-title">Ingredients</h3>
+          <p class="servings">Serves {{ block.servings }}</p>
+          <table class="ingredients-list" style="width:100%">
+            {% for ingredient in block.ingredientsList %}
+                <tr class="row">
+                  <td class="amount">{{ ingredient.amount }}</td>
+                  <td class="ingredient">{{ ingredient.ingredient }}</td> 
+                </tr>
+            {% endfor %}
+          </table>
+          <h3>Method</h3>
+          <div class="method">
+            {{ block.method }}
+          </div>
         </div>
       </div>
     {% endif %}

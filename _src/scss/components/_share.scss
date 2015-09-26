@@ -3,6 +3,10 @@
   width: 100%;
   text-align: center;
 
+  @include breakpoint($vp3) {
+    margin-top: 0;
+  }
+
   &__title {
     @include clearfix;
     display: inline-block;
@@ -21,7 +25,7 @@
   &__icon {
     position: relative;
     display: inline-block;
-    background-color: $tmp-gray;
+    background-color: rgba($tmp-gray, 0.6);
     color: $white;
     width: 25%;
     max-width: $large-spacing;
@@ -41,14 +45,33 @@
 
     .icon-logo {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
       font-size: rem(18);
+      background-repeat: no-repeat;
+      background-size: 50% 50%;
+      background-position: center center;
+
+      &.twitter {
+        background-image: url("/assets/img/icons/twitter.svg");
+        opacity: 0.9;
+      }
+
+      &.facebook {
+        background-image: url("/assets/img/icons/facebook.svg");
+        opacity: 0.9;
+      }
+
+      &.pinterest {
+        background-image: url("/assets/img/icons/pinterest.svg");
+        opacity: 0.9;
+      }
     }
 
     &:hover {
-      background-color: rgba($tmp-dark, 0.8);
+      background-color: $tmp-gray;
     }
   }
 }

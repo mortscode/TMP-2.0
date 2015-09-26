@@ -15,3 +15,14 @@
 @mixin debug($color: tomato, $type: solid) {
   border: 1px $type $color;
 }
+
+// Navicon
+
+@mixin line {
+  display: inline-block;
+  width: $navi-size;
+  height: $navi-size/9;
+  background: $tmp-gray;
+  border-radius: $navi-size/14;
+  transition: $navi-transition;
+}

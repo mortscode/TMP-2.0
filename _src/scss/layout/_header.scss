@@ -4,6 +4,10 @@
   z-index: $z-nav;
   height: em(80);
 
+  @include breakpoint($vp2) {
+    height: em(40);
+  }
+
   &.stuck {
     position: fixed;
     top: 0;
@@ -21,12 +25,17 @@
     top: 25%;
     height: em(85);
     width: em(85);
-    border-radius: em(50);
+    border-radius: 100%;
     background-color: rgba($tmp-gray, 0.95);
     text-align: center;
     opacity: 0;
     transform: translateX(-50%);
     transition: opacity $quick-ease;
+
+    @include breakpoint($vp2) {
+      height: em(60);
+      width: em(60);
+    }
 
     .tmp-logo {
       position: absolute;
@@ -44,6 +53,10 @@
     left: $large-spacing;
     top: 50%;
     transform: translateY(-50%);
+
+    @include breakpoint($vp3) {
+      display: none;
+    }
 
     .nav-list {
 
@@ -87,20 +100,52 @@
 
   .social-links {
     position: absolute;
-    top: 51%;
+    top: 50%;
     right: $large-spacing;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
+
+    @include breakpoint($vp3) {
+      display: none;
+    }
 
     .social-list {
 
       .social-item {
         transition: background-color $quick-ease;
-        background-color: $tmp-light;
-        border-radius: em(14);
+        background-color: rgba($tmp-gray, 0.5);
+        border-radius: 100%;
         display: inline-block;
-        height: em(30);
-        width: em(30);
+        height: em(35);
+        width: em(35);
         margin-left: $small-spacing;
+        position: relative;
+
+        li {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-size: 50% 50%;
+          background-position: center center;
+          background-repeat: no-repeat;
+
+          &.twitter {
+            background-image: url("/assets/img/icons/twitter.svg");
+          }
+
+          &.instagram {
+            background-image: url("/assets/img/icons/instagram.svg");
+          }
+
+          &.pinterest {
+            background-image: url("/assets/img/icons/pinterest.svg");
+          }
+
+          &.facebook {
+            background-image: url("/assets/img/icons/facebook.svg");
+          }
+        }
 
         &:hover {
           background-color: $tmp-gray;

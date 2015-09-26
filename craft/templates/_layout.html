@@ -12,7 +12,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
+
+	<!-- Always force latest IE rendering engine or request Chrome Frame -->
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 
 	<script src="https://use.typekit.net/hqj3djf.js"></script>
@@ -24,48 +29,24 @@
 </head>
 
 <body class="tk-fade">
-
+	{# HOME INTRO #}
 	{% set pageUrl = url(craft.request.path) %}
   {% if pageUrl == siteUrl %}
-	<section class="home-intro">
-		<div class="home-intro__top">
-			<div class="logo-wrapper">
-				<a href="/"><img class="logotype" src="/assets/img/brand/tmp-logotype.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logotype@2x.png'"></a>
-			</div>
-		</div>
-		<div class="home-intro__tagline">
-			<div class="grid">
-				<h1 class="tagline-text">Redefining proper for the <span class="no-wrap">modern homemaker.</span></h1>
-			</div>
-		</div>
-	</section>
+		{% include 'partials/_home-intro' %}
 	{% endif %}
 
-	<header id="header" class="site-header">
-		<div class="grid">
-			<a href="/">
-				<div class="tmp-logo-wrapper">
-					<img class="tmp-logo" src="/assets/img/brand/tmp-logo.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logo.png'">
-				</div>
-			</a>
-			<nav class="navigation">
-				<ul class="nav-list">
-					<li class="search-wrapper"><img class="search-icon" src="/assets/img/icons/search-icon.svg" onerror="this.onerror=null; this.src='/assets/img/icons/search-icon.png'"></li>
-					<a href="#"><li class="nav-item">About</li></a>
-					<a href="#"><li class="nav-item">Shop</li></a>
-					<a href="#"><li class="nav-item">Archive</li></a>
-				</ul>
-			</nav>
-			<div class="social-links">
-				<ul class="social-list">
-					<a href="#" class="social-item"><li></li></a>
-					<a href="#" class="social-item"><li></li></a>
-					<a href="#" class="social-item"><li></li></a>
-					<a href="#" class="social-item"><li></li></a>
-				</ul>
+	<header id="header" class="site-header js-sticky">
+		{% include 'partials/_navigation' %}
+		<a href="/">
+			<div class="tmp-logo-wrapper">
+				<img class="tmp-logo" src="/assets/img/brand/tmp-logo.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logo.png'">
 			</div>
-		</div>
+		</a>
+		{% include 'partials/_social-links' %}
 	</header>
+
+	{# MOBILE NAVIGATION #}
+	{% include 'partials/_mobile-nav' %}
 
 	<main id="content" role="main" class="grid">
 		{% block content %}
@@ -80,10 +61,11 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/shortcuts/sticky.min.js"></script>
+  <script src="/assets/js/vendor/waypoints.min.js"></script>
+  <script src="/assets/js/vendor/sticky.min.js"></script>
   <script src="/assets/js/vendor/lazyload.js"></script>
   <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/debounce.js"></script>
   <script src="/assets/js/main.js"></script>
 </body>
 </html>

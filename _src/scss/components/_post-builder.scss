@@ -29,41 +29,115 @@
       padding-bottom: $large-spacing;
     }
 
-    &--text {
+    .center {
+      @include span(6 wide);
+      @include push(4);
 
-      &.center {
-        @include span(6 wide);
-        @include push(4);
-      }
-
-      &.left {
+      @include breakpoint($vp4) {
         @include span(6);
+        @include push(3);
       }
 
-      &.right {
+      @include breakpoint($vp3) {
+        @include span(8);
+        @include push(2);
+      }
+
+      @include breakpoint($vp2) {
+        @include span(10);
+        @include push(1);
+      }
+    }
+
+    .left {
+      @include span(5);
+      @include push(2);
+
+      @include breakpoint($vp4) {
+        @include push(1);
+      }
+
+      @include breakpoint($vp3) {
+        @include span(6);
+        @include push(0);
+      }
+
+      @include breakpoint($vp2) {
+        @include span(10);
+        @include push(1);
+      }
+    }
+
+    .right {
+      @include span(last 5);
+
+      @include breakpoint($vp3) {
         @include span(last 6);
       }
 
-      &.full {
+      @include breakpoint($vp2) {
+        @include span(10);
+        @include push(1);
+      }
+    }
+
+    .full {
+      @include span(10 wide);
+      @include push(2);
+
+      @include breakpoint($vp4) {
         @include span(10);
         @include push(2);
+      }
+
+      @include breakpoint($vp3) {
+        @include span(12);
+        @include push(0)
+      }
+
+      @include breakpoint($vp2) {
+        @include span(10);
+        @include push(1);
       }
     }
 
     &--callout {
-      @include span(8);
+      @include span(8 wide);
       @include push(3);
       text-align: center;
 
-      &.gray {
+      @include breakpoint($vp4) {
+        @include span(8);
+        @include push(2);
+      }
+
+      @include breakpoint($vp3) {
+        @include span(10);
+        @include push(1);
+      }
+
+      .bq-hr {
+        width: 65%;
+        margin: 0 auto;
+
+        &.top {
+          margin-bottom: $large-spacing;
+        }
+
+        &.bot {
+          margin-top: $large-spacing;
+        }
+      }
+
+      .gray {
         color: $tmp-gray;
       }
 
-      &.dark {
+      .dark {
         color: $tmp-dark;
       }
 
-      &.red {
+      .red {
         color: $tmp-brand;
       }
 
@@ -80,6 +154,173 @@
 
         &.red {
           color: $tmp-brand;
+        }
+      }
+    }
+
+    &--photos {
+      text-align: center;
+      position: relative;
+
+      &.wide {
+        @include span(10 wide);
+        @include push(2);
+
+        @include breakpoint($vp4) {
+          @include span(10);
+          @include push(1)
+        }
+
+        @include breakpoint($vp3) {
+          @include span(12);
+          @include push(0)
+        }
+      }
+
+      &.normal {
+        @include span(8 wide);
+        @include push(3);
+
+        @include breakpoint($vp4) {
+          @include span(8);
+          @include push(2);
+        }
+
+        @include breakpoint($vp3) {
+          @include span(10);
+          @include push(1);
+        }
+
+        @include breakpoint($vp2) {
+          @include span(12);
+          @include push(0);
+        }
+      }
+
+      &.slim {
+        @include span(6 wide);
+        @include push(4);
+
+        @include breakpoint($vp4) {
+          @include span(6);
+          @include push(3);
+        }
+
+        @include breakpoint($vp3) {
+          @include span(8);
+          @include push(2);
+        }
+
+        @include breakpoint($vp2) {
+          @include span(10);
+          @include push(1);
+        }
+      }
+
+      .image-wrapper {
+        width: 100%;
+
+        &.gallery {
+          width: 50%;
+          padding-right: $small-spacing / 2;
+          float: left;
+          margin-bottom: $small-spacing;
+
+          &:nth-child(2n) {
+            padding-right: 0;
+            padding-left: $small-spacing / 2;
+          }
+        }
+
+        &.m-stack,
+        &.m-stack:nth-child(2n) {
+          @include breakpoint($vp2) {
+            width: 100%;
+            padding: 0;
+          }
+        }
+      }
+
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &--ingredients {
+      @include span(6 wide);
+      @include push(4);
+
+      @include breakpoint($vp4) {
+        @include span(6);
+        @include push(3);
+      }
+
+      @include breakpoint($vp3) {
+        @include span(8);
+        @include push(2);
+      }
+
+      @include breakpoint($vp2) {
+        @include span(10);
+        @include push(1);
+      }
+
+      .ingredients-title {
+        margin-bottom: 0;
+      }
+
+      .servings {
+        margin-bottom: $base-spacing;
+      }
+
+      .ingredients-list {
+        margin-bottom: $large-spacing;
+        border-bottom: 1px solid darken($tmp-light, 10%);
+      }
+
+      .row {
+        &:nth-child(odd) {
+          background: darken($tmp-light, 5%);
+        }
+      }
+
+      .amount {
+        padding-left: $base-spacing;
+        padding-right: $base-spacing;
+        width: 20%;
+        font-weight: 600;
+        font-style: italic;
+
+        @include breakpoint($vp3) {
+          width: 25%;
+          padding-left: $small-spacing;
+          padding-right: $small-spacing;
+        }
+      }
+
+      .ingredient {
+        padding-left: $base-spacing;
+        padding-right: $base-spacing;
+        border-left: 1px solid darken($tmp-light, 10%);
+
+        @include breakpoint($vp3) {
+          padding-left: $small-spacing;
+          padding-right: $small-spacing;
+        }
+
+      }
+
+      .method {
+        ol {
+          list-style-type: decimal;
+          padding-left: $base-font-size;
+          font-size: rem(18);
+
+          li {
+            margin-bottom: $small-spacing;
+          }
         }
       }
     }

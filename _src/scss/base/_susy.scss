@@ -3,7 +3,7 @@ $susy: (
   gutters: 0.25,
   column-width: $base-spacing * 4,
   math: fluid,
-  output: isolate,
+  output: float,
   container: em(1440),
   gutter-position: after-static,
   global-box-sizing: border-box,

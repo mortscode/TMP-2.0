@@ -1,22 +1,39 @@
 .aside-column {
 
   &.left {
-    @include span(5 of 24 at 2);
-    padding: $large-spacing 0;
+    @include span(5 of 24);
+    padding: $large-spacing 0 $large-spacing span(1 of 24);
     transition: all $quick-ease;
 
     @include breakpoint($vp4) {
-      @include span(6 of 24);
+      @include span(3);
+    }
+
+    @include breakpoint($vp2) {
+      display: none;
     }
   }
 
   &.right {
-    @include span(2 of 12);
+    @include span(5 of 24);
+    @include pull(2 of 24);
+    // @include span(2 of 12);
+    // @include pull(1 of 24);
     padding: $large-spacing $base-spacing;
     transition: all $quick-ease;
 
+    // @include breakpoint($vp5) {
+    //   @include span(5 of 24);
+    //   @include pull(2 of 24);
+    // }
+
+    @include breakpoint($vp4) {
+      display: none;
+    }
+
     .about-blurb {
       font-size: rem(12);
+      line-height: rem(18);
     }
   }
 
@@ -39,6 +56,22 @@
         content: "";
         display: block;
         padding-bottom: 100%;
+      }
+    }
+
+    .about-names {
+      font-size: rem(24);
+      line-height: rem(30);
+      color: darken($tmp-gray, 20%);
+
+      @include breakpoint($vp4) {
+        font-size: rem(21);
+        line-height: rem(28);
+      }
+
+      @include breakpoint($vp3) {
+        font-size: rem(18);
+        line-height: rem(24);
       }
     }
 

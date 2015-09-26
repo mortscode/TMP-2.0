@@ -25,6 +25,21 @@ h1 {
   line-height: rem(60);
   font-style: italic;
   font-weight: 500;
+
+  @include breakpoint($vp3) {
+    font-size: rem(40);
+    line-height: rem(48);
+  }
+
+  @include breakpoint($vp2) {
+    font-size: rem(30);
+    line-height: rem(36);
+  }
+
+  @include breakpoint($vp1) {
+    font-size: rem(24);
+    line-height: rem(30);
+  }
 }
 
 h2 {
@@ -33,6 +48,11 @@ h2 {
   font-style: italic;
   text-transform: uppercase;
   font-weight: 800;
+
+  @include breakpoint($vp4) {
+    font-size: rem(30);
+    line-height: rem(36);
+  }
 }
 
 h3 {
@@ -50,11 +70,18 @@ h4 {
 }
 
 p {
-  font-size: rem(18);
+  font-size: rem(20);
+  line-height: rem(32);
   margin: 0 0 $small-spacing;
+
+  @include breakpoint($vp3) {
+    font-size: rem(18);
+    line-height: rem(26);
+  }
 
   &.caption {
     font-size: rem(16);
+    line-height: rem(24);
     font-family: $sans;
   }
 }
@@ -69,10 +96,6 @@ a {
   &:focus,
   &:hover {
     color: lighten($action-color, 10%);
-
-    .builder & {
-      text-decoration: underline;
-    }
   }
 
   &:active,
@@ -90,6 +113,11 @@ blockquote {
   text-align: center;
   margin: 0;
   padding: 0;
+
+  @include breakpoint($vp3) {
+    font-size: rem(36);
+    line-height: rem(48);
+  }
 }
 
 .cite {
@@ -112,4 +140,46 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+.builder &,
+.about & {
+  h1 {
+    font-size: rem(36);
+    line-height: rem(48);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: rem(28);
+    line-height: rem(34);
+    font-style: italic;
+    text-transform: none;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: rem(24);
+    line-height: rem(30);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: rem(21);
+    line-height: rem(24);
+    font-weight: 600;
+    font-family: $sans;
+  }
+
+  p a {
+    font-style: italic;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

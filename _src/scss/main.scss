@@ -16,6 +16,7 @@
 @import "components/share";
 @import "components/post-intro";
 @import "components/post-builder";
+@import "components/mobile-nav";
 
 // LAYOUT ================================================
 @import "layout/main-layout";
@@ -25,3 +26,4 @@
 // TEMPLATES =============================================
 
 @import "templates/home";
+@import "templates/about";
