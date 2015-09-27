@@ -47,4 +47,4 @@ function avoidOrphan(elem) {
 var changeStickyHeight = function() {
   var navHeight = $('.site-header').outerHeight();
   $('.sticky-wrapper').css({ height: navHeight });
-}
+};
