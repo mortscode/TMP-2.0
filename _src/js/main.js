@@ -18,6 +18,11 @@ $(document).ready(function() {
     $('.m-nav-menu').toggleClass('is-open');
     $('html body').toggleClass('no-scroll');
   });
+
+  $('.js-search-toggle').on('click', function(){
+    $('.site-search').toggleClass('is-open');
+    $(this).toggleClass('close');
+  });
 });
 
 

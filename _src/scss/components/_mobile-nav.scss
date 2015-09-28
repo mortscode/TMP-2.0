@@ -40,8 +40,63 @@
       text-align: center;
 
       li {
-        font-size: rem(30);
+        font-size: rem(24);
         padding: ($small-spacing / 2) $small-spacing;
+      }
+    }
+
+    .social-links {
+      position: relative;
+      height: 60px;
+      width: 100%;
+      margin-top: $base-spacing;
+      text-align: center;
+
+      .social-item {
+        transition: background-color $quick-ease;
+        background-color: rgba($tmp-gray, 0.5);
+        border-radius: 100%;
+        display: inline-block;
+        width: em(40);
+        margin: 0 $small-spacing / 2;
+        position: relative;
+
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
+
+        li {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-size: 50% 50%;
+          background-position: center center;
+          background-repeat: no-repeat;
+
+          &.twitter {
+            background-image: url("/assets/img/icons/twitter.svg");
+          }
+
+          &.instagram {
+            background-image: url("/assets/img/icons/instagram.svg");
+          }
+
+          &.pinterest {
+            background-image: url("/assets/img/icons/pinterest.svg");
+          }
+
+          &.facebook {
+            background-image: url("/assets/img/icons/facebook.svg");
+          }
+        }
+
+        &:hover {
+          background-color: $tmp-gray;
+        }
       }
     }
   }

@@ -61,20 +61,29 @@
     .nav-list {
 
       .search-wrapper {
-        padding: $base-spacing $small-spacing;
         opacity: 0.4;
         transition: opacity $quick-ease;
         cursor: pointer;
         display: inline-block;
+        background-image: url("/assets/img/icons/search-icon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+        width: em(20);
+        transform: translateY(3px);
 
-        .search-icon {
-          width: auto;
-          height: em(18);
-          transform: translateY(2px);
+        &:after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
         }
 
         &:hover {
           opacity: 1;
+        }
+
+        &.close {
+          background-image: url("/assets/img/icons/close-icon.svg");
         }
       }
 

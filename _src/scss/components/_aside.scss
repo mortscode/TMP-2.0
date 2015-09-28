@@ -3,7 +3,10 @@
   &.left {
     @include span(5 of 24);
     padding: $large-spacing 0 $large-spacing span(1 of 24);
-    transition: all $quick-ease;
+
+    @include breakpoint($vp4) {
+      @include span(3);
+    }
 
     @include breakpoint($vp4) {
       @include span(3);

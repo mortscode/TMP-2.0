@@ -4,7 +4,8 @@
       <div class="logo-wrapper">
         <img class="logotype" src="/assets/img/brand/tmp-logotype.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logotype@2x.png'">
       </div>
-      {% include 'partials/_navigation' %}
+      {% include 'partials/_navigation' with {'navView' : 'mobile'} %}
+      {% include 'partials/_social-links' %}
     </div>
   </div>
   <button class="nav-btn" type="button" role="button" aria-label="Toggle Navigation">

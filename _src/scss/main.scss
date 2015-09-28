@@ -11,12 +11,13 @@
 @import "base/base";
 
 // COMPONENTS ============================================
-@import "components/home-intro";
 @import "components/aside";
-@import "components/share";
+@import "components/home-intro";
+@import "components/mobile-nav";
 @import "components/post-intro";
 @import "components/post-builder";
-@import "components/mobile-nav";
+@import "components/site-search";
+@import "components/share";
 
 // LAYOUT ================================================
 @import "layout/main-layout";
@@ -27,3 +28,4 @@
 
 @import "templates/home";
 @import "templates/about";
+@import "templates/search-results";

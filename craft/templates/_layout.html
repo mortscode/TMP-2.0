@@ -68,7 +68,7 @@
 	{% endif %}
 
 	<header id="header" class="site-header js-sticky">
-		{% include 'partials/_navigation' %}
+		{% include 'partials/_navigation' with {'navView': 'desktop'} %}
 		<a href="/">
 			<div class="tmp-logo-wrapper">
 				<img class="tmp-logo" src="/assets/img/brand/tmp-logo.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logo.png'">

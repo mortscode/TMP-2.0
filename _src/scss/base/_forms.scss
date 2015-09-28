@@ -29,25 +29,24 @@ label {
 #{$all-text-inputs},
 select[multiple=multiple],
 textarea {
-  background-color: $base-background-color;
-  border: $base-border;
+  background-color: $tmp-light;
+  border: none;
   border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
-  box-sizing: border-box;
+  box-shadow: none;
   font-family: $base-font-family;
-  font-size: $base-font-size;
-  margin-bottom: $base-spacing / 2;
-  padding: $base-spacing / 3;
+  font-size: rem(20);
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 0;
   transition: border-color;
-  width: 100%;
+  box-sizing: border-box;
 
   &:hover {
-    border-color: darken($base-border-color, 10%);
+    // border-color: darken($base-border-color, 10%);
   }
 
   &:focus {
-    border-color: $action-color;
-    box-shadow: $form-box-shadow-focus;
+    background-color: $tmp-light;
     outline: none;
   }
 }
