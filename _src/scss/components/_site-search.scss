@@ -1,0 +1,81 @@
+.site-search {
+
+  &.desktop {
+    width: 0;
+    max-width: em(310);
+    z-index: $z-search;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: $large-spacing + em(30);
+    transform: translateY(-50%);
+    padding: 0;
+    overflow: hidden;
+    transition: width $med-ease;
+
+    @include breakpoint($vp3) {
+      display: none;
+    }
+
+    .__form {
+      width: 100%;
+      padding: ($small-spacing / 2.5) em(50) ($small-spacing / 2.5) $small-spacing;
+    }
+
+    .__submit {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding: 0 !important;
+      width: 40px;
+      background-color: rgba($tmp-gray, 0.5);
+      background-image: url("/assets/img/icons/go-icon.svg");
+      background-repeat: no-repeat;
+      background-size: auto 60%;
+      background-position: 50% 50%;
+
+      &:hover,
+      &:focus {
+        background-color: $tmp-gray;
+        outline: none;
+      }
+    }
+
+    &.is-open {
+      width: 40%;
+    }
+  }
+
+  &.mobile {
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    margin-bottom: $base-spacing;
+
+    @include breakpoint($vp3) {
+      display: block;
+    }
+
+    .__form {
+      width: 100%;
+      padding: ($small-spacing / 2) $small-spacing;
+      z-index: $z-search;
+    }
+
+    .__submit {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding: 0 !important;
+      width: 40px;
+      background-color: rgba($tmp-gray, 0.5);
+      background-image: url("/assets/img/icons/go-icon.svg");
+      background-repeat: no-repeat;
+      background-size: auto 60%;
+      background-position: 50% 50%;
+    }
+  }
+}

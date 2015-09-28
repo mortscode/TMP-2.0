@@ -1,10 +1,14 @@
 .home-posts {
-  @include span(8);
+  @include span(8 wide);
   @include push(1);
   padding-right: span(1 of 24);
 
+  @include breakpoint($vp4) {
+    @include push(1 of 24);
+  }
+
   @include breakpoint($vp3) {
-    @include span(9);
+    @include span(last 9);
     @include push(0);
   }
 

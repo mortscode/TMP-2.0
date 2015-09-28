@@ -96,7 +96,8 @@ gulp.task('images', function () {
 gulp.task('sync', ['styles', 'scripts'], function () {
 
   browserSync({
-      proxy: "http://tmp.craft.dev"
+      proxy: "http://tmp.craft.dev",
+      xip: true
   });
 
   gulp.watch(['craft/templates/**/*.html'], reload);
