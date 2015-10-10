@@ -9,7 +9,7 @@ craft/config/db.php
 
 # Uploaded files
 # ----------------------------------------------------------------------
-public/assets/uploads/*
+html/assets/uploads/*
 
 # Misc files
 # ----------------------------------------------------------------------

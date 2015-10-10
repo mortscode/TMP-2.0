@@ -22,12 +22,19 @@ return array(
     'testToEmailAddress' => 'scot.mortimer@gmail.com',
   ),
 
-  // Use IP address of your droplet below
-  '104.236.215.157' => array(
-    'siteUrl' => 'http://104.236.215.157/',
+  '104.236.186.4' => array(
+    'siteUrl' => 'http://104.236.186.4/',
     'environmentVariables' => array(
       'basePath' => '/var/www/html/',
-      'baseUrl'  => 'http://104.236.215.157/',
+      'baseUrl'  => 'http://104.236.186.4/',
+    )
+  ),
+
+  'dev.themodernproper.com' => array(
+    'siteUrl' => 'http://dev.themodernproper.com/',
+    'environmentVariables' => array(
+      'basePath' => '/var/www/html/',
+      'baseUrl'  => 'http://dev.themodernproper.com/',
     )
   )
 );
