@@ -9,7 +9,7 @@ return array(
     'devMode' => true,
     'siteUrl' => 'http://tmp.craft.dev/',
     'environmentVariables' => array(
-      'basePath' => '/users/scotmortimer/Development/Mort/the-modern-proper/html/',
+      'basePath' => '/Users/scotmortimer/Development/Mort/the-modern-proper/html/',
       'baseUrl'  => 'http://tmp.craft.dev/',
     ),
     'testToEmailAddress' => 'scot.mortimer@gmail.com',
