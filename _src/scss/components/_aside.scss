@@ -1,5 +1,27 @@
 .aside-column {
 
+  .aside-title {
+    font-size: rem(24);
+    line-height: rem(30);
+    color: darken($tmp-gray, 20%);
+
+    @include breakpoint($vp4) {
+      font-size: rem(21);
+      line-height: rem(28);
+    }
+
+    @include breakpoint($vp3) {
+      font-size: rem(18);
+      line-height: rem(24);
+    }
+  }
+
+  .aside-blurb {
+    font-size: rem(14);
+    line-height: rem(21);
+    margin-bottom: $base-spacing;
+  }
+
   &.left {
     @include span(5 of 24);
     padding: $large-spacing 0 $large-spacing span(1 of 24);
@@ -41,6 +63,7 @@
   }
 
   .about-tmp {
+    margin-bottom: $large-spacing;
     .logo-wrapper {
       width: 100%;
       height: auto;
@@ -48,7 +71,6 @@
     }
 
     .about-img {
-      background-image: url("../img/brand/tmp-photo.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -61,25 +83,59 @@
         padding-bottom: 100%;
       }
     }
+  }
 
-    .about-names {
-      font-size: rem(24);
-      line-height: rem(30);
-      color: darken($tmp-gray, 20%);
+  .featured {
+    background-color: $white;
+    padding: $small-spacing;
 
-      @include breakpoint($vp4) {
-        font-size: rem(21);
-        line-height: rem(28);
+    &__post {
+      position: relative;
+      width: 100%;
+      margin-top: $small-spacing;
+
+      &:after {
+        content: "";
+        display: block;
+        padding-top: 120%;
       }
 
-      @include breakpoint($vp3) {
-        font-size: rem(18);
-        line-height: rem(24);
-      }
-    }
+      &:hover {
 
-    .about-blurb {
-      margin-bottom: $base-spacing;
+        .featured__post--title {
+          background-color: $tmp-gray;
+        }
+      }
+
+      &--image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &--title {
+        position: absolute;
+        background-color: rgba($tmp-gray, 0.85);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: $white;
+        padding: $small-spacing;
+        font-size: rem(14);
+        line-height: rem(18);
+        font-family: $sans;
+        transition: background-color $quick-ease;
+
+        @include breakpoint($vp4) {
+          font-size: rem(12);
+          line-height: rem(14);
+        }
+      }
     }
   }
 }

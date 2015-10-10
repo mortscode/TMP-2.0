@@ -324,5 +324,35 @@
         }
       }
     }
+
+    .recipe__download {
+      margin: $base-spacing auto 0;
+      text-align: center;
+
+      @include breakpoint($vp3) {
+        display: none;
+      }
+    }
+
+    .suggestion {
+      @include full;
+      margin-top: $large-spacing;
+      background-color: rgba($tmp-gray, 0.2);
+      padding: $base-spacing;
+
+      p {
+        font-size: rem(18);
+        line-height: 1.5;
+      }
+
+      .contact-wrapper {
+        text-align: center;
+        margin: $large-spacing auto $small-spacing;
+
+        .contact-btn {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

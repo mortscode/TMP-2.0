@@ -18,6 +18,10 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+
+  &.page-title {
+    color: darken($tmp-gray, 10%);
+  }
 }
 
 h1 {
@@ -83,6 +87,7 @@ p {
     font-size: rem(16);
     line-height: rem(24);
     font-family: $sans;
+    font-weight: 300;
   }
 }
 

@@ -6,9 +6,13 @@
         <img class="logotype" src="/assets/img/brand/tmp-logotype.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logotype@2x.png'">
       </div>
     {% endif %}
-    <div class="about-img"></div>
-    <h3 class="about-names">Natalie Mortimer <span class="no-wrap">& Holly Erickson</span></h3>
-    <p class="about-blurb caption">Quis aute iure reprehenderit in voluptate velit esse. Idque Caesaris facere voluntate liceret: sese habere.</p>
-    <a href="/about"><div class="btn aside gray">About us</div></a>
+    <div class="about-img" style="background-image:url('{{ asideColumn.asidePhoto.first.url('asidePhoto') }}');"></div>
+    <h3 class="aside-title">{{ asideColumn.asideTitle }}</span></h3>
+    <p class="aside-blurb caption js-avoid-orphan">{{ asideColumn.asideBlurb }}</p>
+    <a href="/about"><div class="btn aside gray buffer-bottom">About us</div></a>
+    <a href="/contact"><div class="btn aside gray">Contact us</div></a>
   </section>
+  {% if featured == "true" %}
+    {% include 'partials/_featured' %}
+  {% endif %}
 </aside>

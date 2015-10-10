@@ -6,12 +6,13 @@
     {% if navView == "desktop" %}
       <li class="search-wrapper js-search-toggle"></li>
     {% endif %}
-    {% if navView == "mobile" %}
-      {% include 'partials/_site-search' with { 'searchView' : 'mobile' } %}
-    {% endif %}
     {% for navLink in mainNavigation.navigationItems %}
       {% set link = navLink.linkInfo %}
       <a href="{{ link.url }}" {{ link.target ? ' target="_blank"' }} title="{{ link.linkText }}"><li class="nav-item">{{ link.linkText }}</li></a>
     {% endfor %}
+    {% if navView == "mobile" %}
+      <a href="/contact" title="Contact"><li class="nav-item">Contact</li></a>
+      {% include 'partials/_site-search' with { 'searchView' : 'mobile' } %}
+    {% endif %}
   </ul>
 </nav>

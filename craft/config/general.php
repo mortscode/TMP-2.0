@@ -1,12 +1,5 @@
 <?php
 
-/**
- * General Configuration
- *
- * All of your system's general configuration settings go in here.
- * You can see a list of the default settings in craft/app/etc/config/defaults/general.php
- */
-
 return array(
   '*' => array(
     'omitScriptNameInUrls' => true,
@@ -14,13 +7,27 @@ return array(
 
   'craft.dev' => array(
     'devMode' => true,
-    'environment' => 'local',
-    'siteUrl' => 'http://tmp.craft.dev'
+    'siteUrl' => 'http://tmp.craft.dev/',
+    'environmentVariables' => array(
+      'basePath' => '/users/scotmortimer/Development/Mort/the-modern-proper/html/',
+      'baseUrl'  => 'http://tmp.craft.dev/',
+    ),
+    'testToEmailAddress' => 'scot.mortimer@gmail.com',
   ),
 
-  'themodernproper.com' => array(
-    'devMode' => false,
-    'environment' => 'prod',
-    'siteUrl' => 'http://themodernproper.com'
+  '104.236.186.4' => array(
+    'siteUrl' => 'http://104.236.186.4/',
+    'environmentVariables' => array(
+      'basePath' => '/var/www/html/',
+      'baseUrl'  => 'http://104.236.186.4/',
+    )
+  ),
+
+  'dev.themodernproper.com' => array(
+    'siteUrl' => 'http://dev.themodernproper.com/',
+    'environmentVariables' => array(
+      'basePath' => '/var/www/html/',
+      'baseUrl'  => 'http://dev.themodernproper.com/',
+    )
   )
 );

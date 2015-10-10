@@ -1,27 +1,24 @@
 <?php
 
-/**
- * Database Configuration
- *
- * All of your system's database configuration settings go in here.
- * You can see a list of the default settings in craft/app/etc/config/defaults/db.php
- */
-
 return array(
+	'*' => array(
+    'server' => 'localhost',
+    'database' => 'craft',
+    'tablePrefix' => 'craft',
+  ),
 
-	// The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
-	'server' => 'localhost',
+  'localhost' => array(
+    'user' => 'root',
+    'password' => 'root',
+  ),
 
-	// The database username to connect with.
-	'user' => 'root',
+  '104.236.186.4' => array(
+    'user' => 'craftcms',
+    'password' => '$cott!M0rt',
+  ),
 
-	// The database password to connect with.
-	'password' => 'root',
-
-	// The name of the database to select.
-	'database' => 'tmp',
-
-	// The prefix to use when naming tables. This can be no more than 5 characters.
-	'tablePrefix' => 'tmp',
-
+  'dev.themodernproper.com' => array(
+    'user' => 'craftcms',
+    'password' => '$cott!M0rt',
+  )
 );

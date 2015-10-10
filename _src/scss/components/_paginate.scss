@@ -1,0 +1,39 @@
+.paginate {
+  padding: $base-spacing 0;
+
+  @include breakpoint($vp2) {
+    padding: $base-spacing;
+  }
+
+  &__link {
+    font-size: 130%;
+    font-style: italic;
+
+    @include breakpoint($vp1) {
+      font-size: 100%;
+    }
+
+    &.prev {
+      @include span(6);
+
+      .paginate__link--text { 
+        &:before {
+          content: "<<";
+          margin-right: $small-spacing;
+        }
+      }
+    }
+
+    &.next {
+      @include span(last 6);
+      text-align: right;
+
+      .paginate__link--text { 
+        &:after {
+          content: ">>";
+          margin-left: $small-spacing;
+        }
+      }
+    }
+  }
+}

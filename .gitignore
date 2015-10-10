@@ -2,10 +2,15 @@
 # ----------------------------------------------------------------------
 craft/storage/runtime/*
 craft/storage/backups/*
+craft/app/
+craft/plugins/
+craft/storage/
+craft/config/db.php
 
 # Uploaded files
 # ----------------------------------------------------------------------
-public/assets/uploads/*
+html/assets/uploads/*
+node_modules/
 
 # Misc files
 # ----------------------------------------------------------------------

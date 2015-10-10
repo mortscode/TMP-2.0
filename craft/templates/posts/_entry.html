@@ -12,17 +12,25 @@
         <h3 class="post__title--date">{{ entry.postDate.format('F d, Y') }}</h3>
         <h1 class="post__title--text js-avoid-orphan">{{ entry.title }}</h1>
       </div>
-      <div class="post__share">
-        <div class="post__share--download btn pop small">Download Recipe</div>
-        {% include 'partials/_share' %}
-      </div>
+
+        <div class="post__share">
+          {% set recipe = entry.postBuilder.type('recipe') %}
+          {% if recipe|length %}
+          <a href="#" class="js-print-recipe"><div class="post__share--download btn pop small">Print Recipe</div></a>
+          {% endif %}
+          {% include 'partials/_share' %}
+        </div>
       <div class="post__image--wrapper">
         <img src="{{ entry.featuredImage.first.url }}" alt="" class="post__image">
       </div>
       {% include 'partials/_post-builder' %}
     </article>
-      
-    {% set vars = {'align' : 'right'} %}
+
+    {% set vars = {'align' : 'right', 'featured' : 'false'} %}
     {% include 'partials/_aside' with vars %}
   </div>
+
+  {% include 'partials/_instructions' %}
+  {% include 'partials/_more-posts' %}
+  
 {% endblock %}

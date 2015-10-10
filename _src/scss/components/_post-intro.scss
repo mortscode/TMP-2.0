@@ -93,10 +93,11 @@
       width: 100%;
       padding: $small-spacing 0;
       text-align: center;
+      margin-bottom: $large-spacing;
 
-      @include breakpoint($vp3) {
-        display: none;
-      }
+      // @include breakpoint($vp3) {
+      //   display: none;
+      // }
     }
   }
 

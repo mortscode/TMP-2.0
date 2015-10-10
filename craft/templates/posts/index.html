@@ -7,14 +7,27 @@
 {% set title = "Posts" %}
 
 {% block content %}
-	<h2>Posts</h2>
+	<div class="grid">
+    <div class="posts">
+      <h2 class="posts__title">Posts</h2>
 
-	{% for entry in craft.entries.section('news').find() %}
-		<article>
-			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-			{{ entry.body.getPage(1) }}
-			<p><a href="{{ entry.url }}">Continue reading</a></p>
-		</article>
-	{% endfor %}
+      {% set entries = craft.entries.section('postEntries') %}
+      
+      {% if entries|length %}
+        {# <p>{{ entries|length }} results:</p> #}
+        <div class="posts__results">
+          {% for entry in entries %}
+            <a class="posts__result--item" href="{{ entry.url }}">
+            <div class="posts__result" style="background-image:url('{{ entry.featuredImage.first.url }}');">
+                <p class="posts__result--date">{{ entry.postDate|date("M j, Y") }}</p>
+                <h3 class="posts__result--title js-avoid-orphan">{{ entry.title }}</h3>
+            </div>
+            </a>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>Sorry. Your search for “{{ query }}” didn’t return any results.</p>
+      {% endif %}
+    </div>
+  </div>
 {% endblock %}
