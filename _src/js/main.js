@@ -6,6 +6,11 @@ $(document).ready(function() {
 
   $('.js-avoid-orphan').toArray().forEach(avoidOrphan);
 
+  $('.js-print-recipe').on('click', function(e){
+    e.preventDefault();
+    window.print();
+  });
+
   // Fire callback at beginning of detection period
   $(window).resize(
     debounce(function() {
@@ -21,6 +26,7 @@ $(document).ready(function() {
 
   $('.js-search-toggle').on('click', function(){
     $('.site-search').toggleClass('is-open');
+    $('#js-search').focus();
     $(this).toggleClass('close');
   });
 });

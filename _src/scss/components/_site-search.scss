@@ -52,7 +52,7 @@
     width: 100%;
     max-width: 100%;
     position: relative;
-    margin-bottom: $base-spacing;
+    margin: $base-spacing 0;
 
     @include breakpoint($vp3) {
       display: block;

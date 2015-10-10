@@ -60,7 +60,8 @@
 
 </head>
 
-<body class="tk-fade">
+{% set section = entry.getSection() %}
+<body class="tk-fade{% if section.handle == 'postEntries' %} print-styles{% endif %}">
 	{# HOME INTRO #}
 	{% set pageUrl = url(craft.request.path) %}
   {% if pageUrl == siteUrl %}
@@ -80,7 +81,7 @@
 	{# MOBILE NAVIGATION #}
 	{% include 'partials/_mobile-nav' %}
 
-	<main id="content" role="main" class="grid">
+	<main id="content" role="main">
 		{% block content %}
 			<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
 			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>

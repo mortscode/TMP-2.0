@@ -22,5 +22,11 @@ return array(
     'devMode' => false,
     'environment' => 'prod',
     'siteUrl' => 'http://themodernproper.com'
+  ),
+
+  'dev.themodernproper.com' => array(
+    'devMode' => false,
+    'environment' => 'prod',
+    'siteUrl' => 'http://dev.themodernproper.com'
   )
 );

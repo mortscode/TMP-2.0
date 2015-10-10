@@ -4,16 +4,17 @@
 @import "../bower/compass-breakpoint/stylesheets/breakpoint";
 @import "../bower/bourbon/app/assets/stylesheets/bourbon";
 @import "base/variables";
-// @import "base/grid-settings";
-// @import "base/breakpoints";
-// @import "../bower/neat/app/assets/stylesheets/neat";
 @import "base/normalize";
 @import "base/base";
 
 // COMPONENTS ============================================
 @import "components/aside";
+@import "components/contact-form";
 @import "components/home-intro";
+@import "components/instructions";
 @import "components/mobile-nav";
+@import "components/more-posts";
+@import "components/paginate";
 @import "components/post-intro";
 @import "components/post-builder";
 @import "components/site-search";
@@ -23,9 +24,11 @@
 @import "layout/main-layout";
 @import "layout/header";
 @import "layout/footer";
+@import "layout/print";
 
 // TEMPLATES =============================================
 
-@import "templates/home";
 @import "templates/about";
+@import "templates/home";
+@import "templates/posts";
 @import "templates/search-results";

@@ -8,20 +8,35 @@
  */
 
 return array(
+	'*' => array(
+	    'tablePrefix' => 'tmp',
+	),
 
-	// The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
-	'server' => 'localhost',
+	'craft.dev' => array(
+	    'server' => 'localhost',
+	    'user' => 'root',
+	    'password' => 'root',
+	    'database' => 'tmp',
+	),
 
-	// The database username to connect with.
-	'user' => 'root',
+	'104.131.161.204' => array(
+	    'server' => 'localhost',
+	    'user' => 'ce2c83cab456',
+	    'password' => '8c05e8025dd0cc55',
+	    'database' => 'tmpdb',
+	),
 
-	// The database password to connect with.
-	'password' => 'root',
+	'dev.themodernproper.com' => array(
+	    'server' => 'localhost',
+	    'user' => 'ce2c83cab456',
+	    'password' => '8c05e8025dd0cc55',
+	    'database' => 'tmpdb',
+	),
 
-	// The name of the database to select.
-	'database' => 'tmp',
-
-	// The prefix to use when naming tables. This can be no more than 5 characters.
-	'tablePrefix' => 'tmp',
-
+	'themodernproper.com' => array(
+	    'server' => 'localhost',
+	    'user' => 'ce2c83cab456',
+	    'password' => '8c05e8025dd0cc55',
+	    'database' => 'tmpdb',
+	)
 );
