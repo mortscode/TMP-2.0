@@ -14,19 +14,20 @@ return array(
 
   'craft.dev' => array(
     'devMode' => true,
-    'environment' => 'local',
-    'siteUrl' => 'http://tmp.craft.dev'
+    'siteUrl' => 'http://tmp.craft.dev/',
+    'environmentVariables' => array(
+      'basePath' => '/users/scotmortimer/Development/Mort/the-modern-proper/html/',
+      'baseUrl'  => 'http://tmp.craft.dev/',
+    ),
+    'testToEmailAddress' => 'scot.mortimer@gmail.com',
   ),
 
-  'themodernproper.com' => array(
-    'devMode' => false,
-    'environment' => 'prod',
-    'siteUrl' => 'http://themodernproper.com'
-  ),
-
-  'dev.themodernproper.com' => array(
-    'devMode' => false,
-    'environment' => 'prod',
-    'siteUrl' => 'http://dev.themodernproper.com'
+  // Use IP address of your droplet below
+  '104.236.215.157' => array(
+    'siteUrl' => 'http://104.236.215.157/',
+    'environmentVariables' => array(
+      'basePath' => '/var/www/html/',
+      'baseUrl'  => 'http://104.236.215.157/',
+    )
   )
 );

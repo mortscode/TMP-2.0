@@ -9,34 +9,19 @@
 
 return array(
 	'*' => array(
-	    'tablePrefix' => 'tmp',
-	),
+    'server' => 'localhost',
+    'database' => 'craft',
+    'tablePrefix' => 'craft',
+  ),
 
-	'craft.dev' => array(
-	    'server' => 'localhost',
-	    'user' => 'root',
-	    'password' => 'root',
-	    'database' => 'tmp',
-	),
+  'localhost' => array(
+    'user' => 'root',
+    'password' => 'root',
+  ),
 
-	'104.131.161.204' => array(
-	    'server' => 'localhost',
-	    'user' => 'ce2c83cab456',
-	    'password' => '8c05e8025dd0cc55',
-	    'database' => 'tmpdb',
-	),
-
-	'dev.themodernproper.com' => array(
-	    'server' => 'localhost',
-	    'user' => 'ce2c83cab456',
-	    'password' => '8c05e8025dd0cc55',
-	    'database' => 'tmpdb',
-	),
-
-	'themodernproper.com' => array(
-	    'server' => 'localhost',
-	    'user' => 'ce2c83cab456',
-	    'password' => '8c05e8025dd0cc55',
-	    'database' => 'tmpdb',
-	)
+  // Use IP of your droplet and MySQL credentials of a user you created
+  '12.34.56.78' => array(
+    'user' => 'craftcms',
+    'password' => '$cott!M0rt',
+  )
 );
