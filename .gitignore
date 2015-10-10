@@ -10,7 +10,7 @@ craft/config/db.php
 # Uploaded files
 # ----------------------------------------------------------------------
 html/assets/uploads/*
-node_modules/*
+node_modules/
 
 # Misc files
 # ----------------------------------------------------------------------
