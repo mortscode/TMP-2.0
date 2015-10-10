@@ -7,12 +7,8 @@ return array(
 
   'craft.dev' => array(
     'devMode' => true,
-    'siteUrl' => 'http://tmp.craft.dev/',
-    'environmentVariables' => array(
-      'basePath' => '/Users/scotmortimer/Development/Mort/the-modern-proper/html/',
-      'baseUrl'  => 'http://tmp.craft.dev/',
-    ),
-    'testToEmailAddress' => 'scot.mortimer@gmail.com',
+    'environment' => 'local',
+    'siteUrl' => 'http://tmp.craft.dev'
   ),
 
   '104.236.186.4' => array(
