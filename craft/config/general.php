@@ -25,5 +25,5 @@ return array(
       'basePath' => '/var/www/html/',
       'baseUrl'  => 'http://dev.themodernproper.com/',
     )
-  )
+  ),
 );
