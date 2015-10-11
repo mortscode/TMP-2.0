@@ -5,7 +5,6 @@ craft/storage/backups/*
 craft/app/
 craft/plugins/
 craft/storage/
-craft/config/db.php
 
 # Uploaded files
 # ----------------------------------------------------------------------
@@ -31,3 +30,4 @@ dwsync.xml
 logs/*
 
 node_modules
+craft/config/db.php
