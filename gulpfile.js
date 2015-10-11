@@ -39,13 +39,13 @@ gulp.task('html', function(){
 });
 
 // JS Hint & Uglify
-// Check JS for syntax errors, minify & move to public/assets
+// Check JS for syntax errors, minify & move to html/assets
 gulp.task('scripts', function () {
   return gulp.src('_src/js/**/*.js')
     //check JS syntax
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe(gulp.dest('public/assets/js'))
+    .pipe(gulp.dest('html/assets/js'))
     .pipe($.livereload());
 });
 
@@ -54,9 +54,9 @@ gulp.task('scripts-min', function () {
     //check JS syntax
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
-    //uglify to public
+    //uglify to html
     .pipe($.uglify())
-    .pipe(gulp.dest('public/assets/js'))
+    .pipe(gulp.dest('html/assets/js'))
     .pipe($.livereload());
 });
 
@@ -74,7 +74,7 @@ gulp.task('styles', function () {
     }))
     .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     // Concatenate and minify styles
-    .pipe(gulp.dest('public/assets/css'))
+    .pipe(gulp.dest('html/assets/css'))
     .pipe($.size({title: 'styles'}))
     .pipe($.livereload());
 });
@@ -82,12 +82,12 @@ gulp.task('styles', function () {
 // Optimize Images
 // Optimizes images for deployment & overwrites original files
 gulp.task('images', function () {
-  return gulp.src('public/assets/img/**/*')
+  return gulp.src('html/assets/img/**/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('public/assets/img'))
+    .pipe(gulp.dest('html/assets/img'))
     .pipe($.size({title: 'img'}));
 });
 
@@ -103,7 +103,7 @@ gulp.task('sync', ['styles', 'scripts'], function () {
   gulp.watch(['craft/templates/**/*.html'], reload);
   gulp.watch(['_src/scss/**/*.scss'], ['styles', reload]);
   gulp.watch(['_src/js/**/*.js'], ['scripts', reload]);
-  gulp.watch(['public/assets/images/**/*'], ['images', reload]);
+  gulp.watch(['html/assets/images/**/*'], ['images', reload]);
 });
 
 // Watch Files For Changes & Reload
@@ -115,7 +115,7 @@ gulp.task('default', ['styles', 'scripts', 'html'], function () {
   gulp.watch(['craft/templates/**/*.html'], ['html']);
   gulp.watch(['_src/scss/**/*.scss'], ['styles']);
   gulp.watch(['_src/js/**/*.js'], ['scripts']);
-  gulp.watch(['public/assets/images/**/*'], ['images']);
+  gulp.watch(['html/assets/images/**/*'], ['images']);
 });
 
 // Watch Files For Changes & Reload
