@@ -1,5 +1,6 @@
 # Craft runtime and backups folders
 # ----------------------------------------------------------------------
+craft/config/db.php
 craft/storage/runtime/*
 craft/storage/backups/*
 craft/app/
@@ -30,4 +31,3 @@ dwsync.xml
 logs/*
 
 node_modules
-craft/config/db.php
