@@ -649,8 +649,7 @@ img, picture {
   float: left;
   margin-right: 0.8403361345%;
   margin-left: -8.4033613445%;
-  padding: 3em 1.5em;
-  transition: all 200ms ease-in-out; }
+  padding: 3em 1.5em; }
   @media  (max-width: 1200px) {
     .aside-column.right {
       display: none; } }

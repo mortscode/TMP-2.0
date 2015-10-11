@@ -42,15 +42,7 @@
   &.right {
     @include span(5 of 24);
     @include pull(2 of 24);
-    // @include span(2 of 12);
-    // @include pull(1 of 24);
     padding: $large-spacing $base-spacing;
-    transition: all $quick-ease;
-
-    // @include breakpoint($vp5) {
-    //   @include span(5 of 24);
-    //   @include pull(2 of 24);
-    // }
 
     @include breakpoint($vp4) {
       display: none;
