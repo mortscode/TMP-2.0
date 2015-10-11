@@ -13,13 +13,13 @@ return array(
     'password' => 'root',
   ),
 
-  '104.236.186.4' => array(
-    'user' => 'craftcms',
-    'password' => '$cott!M0rt',
+  '107.170.205.173' => array(
+    'user' => 'mrtmr',
+    'password' => 'M0rti$a218N2!',
   ),
 
   'dev.themodernproper.com' => array(
-    'user' => 'craftcms',
-    'password' => '$cott!M0rt',
+    'user' => 'mrtmr',
+    'password' => 'M0rti$a218N2!',
   )
 );

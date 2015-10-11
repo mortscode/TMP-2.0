@@ -11,11 +11,11 @@ return array(
     'siteUrl' => 'http://tmp.craft.dev'
   ),
 
-  '104.236.186.4' => array(
-    'siteUrl' => 'http://104.236.186.4/',
+  '107.170.205.173' => array(
+    'siteUrl' => 'http://107.170.205.173/',
     'environmentVariables' => array(
       'basePath' => '/var/www/html/',
-      'baseUrl'  => 'http://104.236.186.4/',
+      'baseUrl'  => 'http://107.170.205.173/',
     )
   ),
 
