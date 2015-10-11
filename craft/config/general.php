@@ -12,18 +12,20 @@ return array(
   ),
 
   '107.170.205.173' => array(
-    'siteUrl' => 'http://107.170.205.173/',
+    'siteUrl' => 'http://107.170.205.173',
+    'devMode' => false,
     'environmentVariables' => array(
       'basePath' => '/var/www/html/',
-      'baseUrl'  => 'http://107.170.205.173/',
+      'baseUrl'  => 'http://107.170.205.173',
     )
   ),
 
   'dev.themodernproper.com' => array(
-    'siteUrl' => 'http://dev.themodernproper.com/',
+    'siteUrl' => 'http://dev.themodernproper.com',
+    'devMode' => false,
     'environmentVariables' => array(
       'basePath' => '/var/www/html/',
-      'baseUrl'  => 'http://dev.themodernproper.com/',
+      'baseUrl'  => 'http://dev.themodernproper.com',
     )
   ),
 );
