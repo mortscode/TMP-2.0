@@ -12,89 +12,71 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-	<!-- Always force latest IE rendering engine or request Chrome Frame -->
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-	<title>{% if entry is defined %}{% if entry.pageTitle|length %}{{ entry.pageTitle }}{% else %}{% if entry.title|length %}{{ entry.title }} / {% endif %}{{ siteName }}{% endif %}{% else %}{{ siteName }}{% endif %}</title>
-	
-	{% if entry is defined %}
-	  <!-- // META GAME ON FLEEK // -->
-	  {% set siteImage = random(seo.siteImages) %}
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <meta name="description" content="{% if entry.pageDescription|length %}{{ entry.pageDescription }}{% else %}{{ seo.siteDescription }}{% endif %}" />
-	  <meta name="keywords" content="{% if seo.siteKeywords|length %}{{ seo.siteKeywords }}{% endif %}">
+  <title>{% if entry is defined %}{% if entry.pageTitle|length %}{{ entry.pageTitle }}{% else %}{% if entry.title|length %}{{ entry.title }} / {% endif %}{{ siteName }}{% endif %}{% else %}{{ siteName }}{% endif %}</title>
 
-	  <!-- Twitter Card data -->
-	  <meta name="twitter:card" content="summary">
-	  <meta name="twitter:site" content="@themodernproper">
-	  <meta name="twitter:title" content="{% if entry.pageTitle|length %}{{ entry.pageTitle }}{% else %}{% if entry.title|length %}{{ entry.title }} / {% endif %}{{ siteName }}{% endif %}">
-	  <meta name="twitter:description" content="{% if entry.pageDescription|length %}{{ entry.pageDescription }}{% else %}{{ seo.siteDescription }}{% endif %}">
-	  <meta name="twitter:creator" content="@themodernproper">
-	  <meta name="twitter:image" content="{% if entry.pageImage|length %}{{ entry.pageImage.first.url }}{% else %}{{ siteImage.url }}{% endif %}">
+  {% if entry is defined %}
+   {% include 'partials/_meta-tags'%}  
+  {% else %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ seo.siteDescription }}" />
+    <meta name="keywords" content="{% if seo.siteKeywords|length %}{{ seo.siteKeywords }}{% endif %}">  
+  {% endif %}
 
-	  <!-- Open Graph data -->
-	  <meta property="og:title" content="{% if entry.pageTitle|length %}{{ entry.pageTitle }}{% else %}{% if entry.title|length %}{{ entry.title }} / {% endif %}{{ siteName }}{% endif %}" />
-	  <meta property="og:type" content="website" />
-	  <meta property="og:url" content="{{ entry.url }}" />
-	  <meta property="og:image" content="{% if entry.pageImage|length %}{{ entry.pageImage.first.url }}{% else %}{{ siteImage.url }}{% endif %}" />
-	  <meta property="og:description" content="{% if entry.pageDescription|length %}{{ entry.pageDescription }}{% else %}{{ seo.siteDescription }}{% endif %}" /> 
-	  <meta property="og:site_name" content="The Modern Proper" />
-	  {# <meta property="fb:admins" content="217725341721253" /> #}
+  <script src="https://use.typekit.net/hqj3djf.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-	  {% else %}
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <meta name="description" content="{{ seo.siteDescription }}" />
-	  <meta name="keywords" content="{% if seo.siteKeywords|length %}{{ seo.siteKeywords }}{% endif %}">
-	      
-	{% endif %}
-
-	<script src="https://use.typekit.net/hqj3djf.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-	<link rel="home" href="{{ siteUrl }}" />
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="home" href="{{ siteUrl }}" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
 
 </head>
 
-{% set section = entry.getSection() %}
+{% if entry is defined %}
+  {% set section = entry.getSection() %}
+{% else %}
+  {% set section = 'no-section' %}
+{% endif %}
+
 <body class="tk-fade{% if section.handle == 'postEntries' %} print-styles{% endif %}">
-	{# HOME INTRO #}
-	{% set pageUrl = url(craft.request.path) %}
+  {# HOME INTRO #}
+  {% set pageUrl = url(craft.request.path) %}
   {% if pageUrl == siteUrl %}
-		{% include 'partials/_home-intro' %}
-	{% endif %}
+   {% include 'partials/_home-intro' %}
+  {% endif %}
 
-	<header id="header" class="site-header js-sticky">
-		{% include 'partials/_navigation' with {'navView': 'desktop'} %}
-		<a href="/">
-			<div class="tmp-logo-wrapper">
-				<img class="tmp-logo" src="/assets/img/brand/tmp-logo.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logo.png'">
-			</div>
-		</a>
-		{% include 'partials/_social-links' %}
-	</header>
+  <header id="header" class="site-header js-sticky">
+   {% include 'partials/_navigation' with {'navView': 'desktop'} %}
+   <a href="/">
+     <div class="tmp-logo-wrapper">
+      <img class="tmp-logo" src="/assets/img/brand/tmp-logo.svg" onerror="this.onerror=null; this.src='/assets/img/brand/tmp-logo.png'">
+     </div>
+   </a>
+   {% include 'partials/_social-links' %}
+  </header>
 
-	{# MOBILE NAVIGATION #}
-	{% include 'partials/_mobile-nav' %}
+  {# MOBILE NAVIGATION #}
+  {% include 'partials/_mobile-nav' %}
 
-	<main id="content" role="main">
-		{% block content %}
-			<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-			<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-		{% endblock %}
-	</main>
+  <main id="content" role="main">
+   {% block content %}
+     <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+     <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+   {% endblock %}
+  </main>
 
-	<footer id="footer" class="footer">
-		<div class="grid">
-			Copyright {{ now.year }} / {{ craft.request.serverName }}
-		</div>
-	</footer>
+  <footer id="footer" class="footer">
+   <div class="grid">
+     Copyright {{ now.year }} / {{ craft.request.serverName }}
+   </div>
+  </footer>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
   <script src="/assets/js/vendor/waypoints.min.js"></script>
   <script src="/assets/js/vendor/sticky.min.js"></script>
