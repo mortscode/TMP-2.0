@@ -40,7 +40,7 @@
     padding: em(70) 0 0;
 
     @include breakpoint($vp2) {
-      padding: em(40) 0 0;
+      padding: em(40) 0 em(20);
     }
 
     .tagline-text {

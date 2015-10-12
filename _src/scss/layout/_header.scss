@@ -13,6 +13,7 @@
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
 
     .tmp-logo-wrapper {
       opacity: 1;
@@ -35,6 +36,7 @@
     @include breakpoint($vp2) {
       height: em(60);
       width: em(60);
+      opacity: 1;
     }
 
     .tmp-logo {
@@ -101,7 +103,7 @@
         transition: color $quick-ease;
 
         &:hover {
-          color: $tmp-brand;
+          color: $action-color;
         }
       }
     }

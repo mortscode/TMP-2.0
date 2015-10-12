@@ -29,13 +29,13 @@ $white: #fff;
 
 $tmp-light: #f2f2f2;
 $tmp-gray: #8c928c;
-$tmp-brand: #965251;
+$tmp-brand: #f7c9b8;
 $tmp-dark: #212621;
 
 // Font Colors
 $base-background-color: $tmp-light;
 $base-font-color: $tmp-dark;
-$action-color: $tmp-brand;
+$action-color: darken($tmp-brand, 15%);
 
 // Transitions
 $quick-ease: 200ms ease-in-out;

@@ -13,11 +13,12 @@
     left: 0;
     height: 0;
     width: 100%;
-    overflow: hidden;
+    overflow-y: hidden;
     transition: height $med-ease;
 
     &.is-open {
       height: 100vh;
+      min-height: 500px;
 
       .m-nav-content {
         opacity: 1;
@@ -31,17 +32,31 @@
       transform: translateY(-$large-spacing);
       max-width: 400px;
       margin: 0 auto;
-      padding: em(80) $large-spacing;
+      padding: em(60) $large-spacing;
       transition: transform $med-ease, opacity $quick-ease;
+
+      @include breakpoint($vp-short) {
+        padding: em(40) $large-spacing;
+      }
     }
 
     .navigation {
       margin-top: $base-spacing;
+      text-align: center;
 
       li {
         font-size: rem(24);
         font-style: italic;
         padding: ($small-spacing / 2) $small-spacing;
+        border-bottom: 2px solid $tmp-light;
+
+        @include breakpoint($vp-short) {
+          font-size: rem(18);
+        }
+
+        &.no-line {
+          border-bottom: none;
+        }
       }
     }
 
