@@ -30,7 +30,7 @@ h1 {
   font-style: italic;
   font-weight: 500;
 
-  @include breakpoint($vp3) {
+  @include breakpoint($vp4) {
     font-size: rem(40);
     line-height: rem(48);
   }
@@ -78,7 +78,7 @@ p {
   line-height: rem(32);
   margin: 0 0 $small-spacing;
 
-  @include breakpoint($vp3) {
+  @include breakpoint($vp4) {
     font-size: rem(18);
     line-height: rem(26);
   }

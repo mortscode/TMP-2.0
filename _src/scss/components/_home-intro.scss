@@ -6,24 +6,26 @@
     padding: $large-spacing 0;
     width: 100%;
 
-    @include breakpoint($vp3) {
-      padding: em(30) 0;
+    @include breakpoint($vp4) {
+      padding: $base-spacing 0;
     }
 
-    @include breakpoint($vp2) {
+    @include breakpoint($vp3) {
       padding: em(14) 0 em(16);
     }
 
     .logo-wrapper {
       display: block;
-      height: rem(21);
+      height: rem(18);
       margin: 0 auto;
-      width: rem(420);
       text-align: center;
 
-      @include breakpoint($vp2) {
+      @include breakpoint($vp4) {
+        height: rem(16);
+      }
+
+      @include breakpoint($vp3) {
         height: rem(14);
-        width: rem(210);
       }
 
       .logotype {
@@ -39,7 +41,11 @@
     color: $tmp-gray;
     padding: em(70) 0 0;
 
-    @include breakpoint($vp2) {
+    @include breakpoint($vp4) {
+      padding: em(60) 0 0;
+    }
+
+    @include breakpoint($vp3) {
       padding: em(40) 0 em(20);
     }
 

@@ -4,7 +4,7 @@
   z-index: $z-nav;
   height: em(80);
 
-  @include breakpoint($vp2) {
+  @include breakpoint($vp3) {
     height: em(40);
   }
 
@@ -33,7 +33,7 @@
     transform: translateX(-50%);
     transition: opacity $quick-ease;
 
-    @include breakpoint($vp2) {
+    @include breakpoint($vp3) {
       height: em(60);
       width: em(60);
       opacity: 1;
@@ -71,7 +71,8 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 50% 50%;
-        width: em(20);
+        width: em(18);
+        margin-right: em(3);
         transform: translateY(3px);
 
         &:after {
@@ -91,14 +92,16 @@
 
       .nav-item {
         padding: $base-spacing $small-spacing;
-        font-family: $sans;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 1px;
         font-weight: 600;
         display: inline-block;
       }
 
       a {
         color: rgba($tmp-dark, 0.7);
-        font-size: rem(18);
+        font-size: rem(16);
         margin: 0;
         transition: color $quick-ease;
 
@@ -126,8 +129,8 @@
         background-color: rgba($tmp-gray, 0.5);
         border-radius: 100%;
         display: inline-block;
-        height: em(35);
-        width: em(35);
+        height: em(32);
+        width: em(32);
         margin-left: $small-spacing;
         position: relative;
 

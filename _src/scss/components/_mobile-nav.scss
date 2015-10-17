@@ -12,9 +12,10 @@
     top: 0;
     left: 0;
     height: 0;
+    min-height: 0;
     width: 100%;
     overflow-y: hidden;
-    transition: height $med-ease;
+    transition: height $med-ease, min-height $med-ease;
 
     &.is-open {
       height: 100vh;
@@ -135,8 +136,11 @@
     outline: none;
     border: none;
 
-    @include breakpoint($vp2) {
+    @include breakpoint($vp3) {
       top: 0;
+    }
+
+    @include breakpoint($vp2) {
       right: 0;
     }
 
