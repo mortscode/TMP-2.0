@@ -43,7 +43,11 @@
             {% for ingredient in block.ingredientsList %}
                 <tr class="row">
                   <td class="amount">{{ ingredient.amount }}</td>
-                  <td class="ingredient">{{ ingredient.ingredient }}</td> 
+                  {% if ingredient.linkUrl|length %}
+                    <td class="ingredient"><a href="{{ ingredient.linkUrl }}">{{ ingredient.ingredient }}</a></td>
+                  {% else %}
+                    <td class="ingredient">{{ ingredient.ingredient }}</td>
+                  {% endif %}
                 </tr>
             {% endfor %}
           </table>
