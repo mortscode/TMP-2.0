@@ -1611,11 +1611,12 @@ img, picture {
           margin-right: 1.6949152542%;
           margin-left: 8.4745762712%; } }
       .builder__section--ingredients .ingredients-title {
-        margin-bottom: 0; }
+        margin: 1.5em 0 0; }
         .builder__section--ingredients .ingredients-title.caps {
+          margin-top: 0;
           text-transform: uppercase; }
       .builder__section--ingredients .servings {
-        margin-bottom: 1.5em; }
+        margin-top: 0.75em; }
       .builder__section--ingredients .ingredients-list {
         margin-bottom: 3em;
         border-bottom: 1px solid #d8d8d8; }

@@ -268,15 +268,16 @@
       }
 
       .ingredients-title {
-        margin-bottom: 0;
+        margin: $base-spacing 0 0;
 
         &.caps {
+          margin-top: 0;
           text-transform: uppercase;
         }
       }
 
       .servings {
-        margin-bottom: $base-spacing;
+        margin-top: $small-spacing;
       }
 
       .ingredients-list {

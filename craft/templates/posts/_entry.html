@@ -25,7 +25,7 @@
       </div>
       {% include 'partials/_post-builder' %}
 
-      {% if entry.recipeStatus == true %}
+      {% if entry.recipeStatus|length %}
         {% include 'partials/_recipe-builder' %}
       {% endif %}
 
