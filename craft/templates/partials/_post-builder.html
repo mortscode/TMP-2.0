@@ -37,10 +37,34 @@
     {% if block.type == "recipe" %}
       <div class="builder__section builder--recipe top-double bot-double">
         <div class="builder__section--ingredients">
-          <h3 class="ingredients-title">Ingredients</h3>
+          <h3 class="ingredients-title">{{ entry.title }}</h3>
           <p class="servings">Serves {{ block.servings }}</p>
-          <table class="ingredients-list" style="width:100%">
-            {% for ingredient in block.ingredientsList %}
+
+          {% if block.mainListTitle|length %}
+            <h4>{{ block.mainListTitle }}</h4>
+          {% endif %}
+          
+          {% for ingredient in block.mainIngredientsList %}
+            <h4>{{ block.mainListTitle }}</h4>
+            <table class="ingredients-list" style="width:100%">
+              <tr class="row">
+                <td class="amount">{{ ingredient.amount }}</td>
+                {% if ingredient.linkUrl|length %}
+                  <td class="ingredient"><a href="{{ ingredient.linkUrl }}" target="_blank">{{ ingredient.ingredient }}</a></td>
+                {% else %}
+                  <td class="ingredient">{{ ingredient.ingredient }}</td>
+                {% endif %}
+              </tr>
+            </table>
+          {% endfor %}
+          
+          {% if block.secondaryListTitle|length %}
+            <h4>{{ block.secondaryListTitle }}</h4>
+          {% endif %}
+          
+          {% if block.secondaryIngredientsList|length %}
+            {% for ingredient in block.secondaryIngredientsList %}
+              <table class="ingredients-list" style="width:100%">
                 <tr class="row">
                   <td class="amount">{{ ingredient.amount }}</td>
                   {% if ingredient.linkUrl|length %}
@@ -49,8 +73,9 @@
                     <td class="ingredient">{{ ingredient.ingredient }}</td>
                   {% endif %}
                 </tr>
+              </table>
             {% endfor %}
-          </table>
+          {% endif %}
           <h3>Method</h3>
           <div class="method">
             {{ block.method }}
