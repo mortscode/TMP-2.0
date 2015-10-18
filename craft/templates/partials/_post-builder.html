@@ -2,7 +2,7 @@
   {% for block in entry.postBuilder %}
 
     {% if block.type == "textBlock" %}
-      <div class="builder__section builder--text top-{{ block.paddingTop}} bot-{{ block.paddingBottom}}">
+      <div class="builder__section builder--text top-double bot-double">
         <div class="builder__section--text {{ block.position }}">
           {{ block.text }}
         </div>
@@ -10,7 +10,7 @@
     {% endif %}
 
     {% if block.type == "callout" %}
-      <div class="builder__section builder--callout top-{{ block.paddingTop}} bot-{{ block.paddingBottom}}">
+      <div class="builder__section builder--callout top-double bot-double">
         <div class="builder__section--callout">
           <hr class="bq-hr top">
           <blockquote class="text {{ block.textColor }} js-avoid-orphan">{{ block.text }}</blockquote>
