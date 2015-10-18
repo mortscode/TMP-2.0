@@ -1311,10 +1311,7 @@ img, picture {
         margin-left: 33.8983050847%; } }
     @media  (max-width: 600px) {
       .post__share {
-        width: 49.1525423729%;
-        float: left;
-        margin-right: 1.6949152542%;
-        margin-left: 25.4237288136%; } }
+        display: none; } }
     .post__share--download {
       width: 100%;
       padding: 0.75em 0;

@@ -85,8 +85,7 @@
     }
 
     @include breakpoint($vp2) {
-      @include span(6);
-      @include push(3);
+      display: none;
     }
 
     &--download {
