@@ -1935,7 +1935,7 @@ body {
 @media print {
   body {
     background-color: #fff; }
-  body.print-styles .aside-column, body.print-styles .site-header, body.print-styles .footer, body.print-styles .mobile-nav, body.print-styles .post__title--date, body.print-styles .post__share, body.print-styles .post__image--wrapper, body.print-styles .builder--photos, body.print-styles .builder--text, body.print-styles .builder--callout, body.print-styles .more-posts, body.print-styles .sticky-wrapper, body.print-styles .recipe__download, body.print-styles .instructions {
+  body.print-styles .aside-column, body.print-styles .site-header, body.print-styles .footer, body.print-styles .mobile-nav, body.print-styles .post__title--date, body.print-styles .post__title--text, body.print-styles .post__share, body.print-styles .post__image--wrapper, body.print-styles .builder--photos, body.print-styles .builder--text, body.print-styles .builder--callout, body.print-styles .more-posts, body.print-styles .sticky-wrapper, body.print-styles .recipe__download, body.print-styles .instructions {
     display: none; }
   body.print-styles * {
     font-size: 13px;
