@@ -172,10 +172,11 @@ picture {
   }
 
   h4 {
-    font-size: rem(21);
+    font-size: rem(18);
     line-height: rem(24);
     font-weight: 600;
     font-family: $sans;
+    text-transform: uppercase;
   }
 
   p a {

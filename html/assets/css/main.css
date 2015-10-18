@@ -586,10 +586,11 @@ img, picture {
   font-style: italic;
   font-weight: 600; }
 .builder h4, .about h4 {
-  font-size: 1.3125rem;
+  font-size: 1.125rem;
   line-height: 1.5rem;
   font-weight: 600;
-  font-family: 'adelle-sans', -apple-system, sans-serif; }
+  font-family: 'adelle-sans', -apple-system, sans-serif;
+  text-transform: uppercase; }
 .builder p a, .about p a {
   font-style: italic; }
   .builder p a:active, .builder p a:focus, .builder p a:hover, .about p a:active, .about p a:focus, .about p a:hover {
@@ -1977,7 +1978,7 @@ body {
       body.print-styles .post .ingredients-list .row {
         border-bottom: 1px solid #8c928c; }
         body.print-styles .post .ingredients-list .row td {
-          padding: 10px; }
+          padding: 5px 10px; }
         body.print-styles .post .ingredients-list .row .amount {
           width: 15%;
           border-right: 1px solid #8c928c; } }
