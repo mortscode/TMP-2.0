@@ -1373,18 +1373,6 @@ img, picture {
       padding-bottom: 1.5em; }
     .builder__section.bot-double {
       padding-bottom: 3em; }
-    .builder__section.m-top-none {
-      margin-top: 0; }
-    .builder__section.m-top-normal {
-      margin-top: 1.5em; }
-    .builder__section.m-top-double {
-      margin-top: 3em; }
-    .builder__section.m-bot-none {
-      margin-bottom: 0; }
-    .builder__section.m-bot-normal {
-      margin-bottom: 1.5em; }
-    .builder__section.m-bot-double {
-      margin-bottom: 3em; }
     .builder__section .center {
       width: 50.8474576271%;
       float: left;

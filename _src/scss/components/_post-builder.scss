@@ -29,30 +29,6 @@
       padding-bottom: $large-spacing;
     }
 
-    &.m-top-none {
-      margin-top: 0;
-    }
-
-    &.m-top-normal {
-      margin-top: $base-spacing;
-    }
-
-    &.m-top-double {
-      margin-top: $large-spacing;
-    }
-
-    &.m-bot-none {
-      margin-bottom: 0;
-    }
-
-    &.m-bot-normal {
-      margin-bottom: $base-spacing;
-    }
-
-    &.m-bot-double {
-      margin-bottom: $large-spacing;
-    }
-
     .center {
       @include span(6 wide);
       @include push(4);
