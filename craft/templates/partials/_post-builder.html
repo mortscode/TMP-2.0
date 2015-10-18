@@ -42,10 +42,11 @@
 
           {% if block.mainListTitle|length %}
             <h4>{{ block.mainListTitle }}</h4>
+          {% else %}
+            <h4>Ingredients</h4>
           {% endif %}
           
           {% for ingredient in block.mainIngredientsList %}
-            <h4>{{ block.mainListTitle }}</h4>
             <table class="ingredients-list" style="width:100%">
               <tr class="row">
                 <td class="amount">{{ ingredient.amount }}</td>
