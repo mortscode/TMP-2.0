@@ -10,8 +10,7 @@
     .site-header,
     .footer,
     .mobile-nav,
-    .post__title--date,
-    .post__title--text,
+    .post__title,
     .post__share,
     .post__image--wrapper,
     .builder--photos,
@@ -67,8 +66,17 @@
         }
       }
 
-      .builder__section--ingredients {
-        @include full;
+      .builder__section {
+
+        &--ingredients {
+          @include full;
+        }
+
+        &.top-double,
+        &.bot-double {
+          padding: 0;
+        }
+
       }
 
       .ingredients-list {
