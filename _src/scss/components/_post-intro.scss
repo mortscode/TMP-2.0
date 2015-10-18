@@ -85,7 +85,12 @@
     }
 
     @include breakpoint($vp2) {
-      display: none;
+      @include span(6);
+      @include push(3);
+
+      .share {
+        display: none;
+      }
     }
 
     &--download {
@@ -93,10 +98,6 @@
       padding: $small-spacing 0;
       text-align: center;
       margin-bottom: $large-spacing;
-
-      // @include breakpoint($vp3) {
-      //   display: none;
-      // }
     }
   }
 

@@ -24,6 +24,11 @@
         <img src="{{ entry.featuredImage.first.url }}" alt="" class="post__image">
       </div>
       {% include 'partials/_post-builder' %}
+
+      {% if entry.recipeStatus == true %}
+        {% include 'partials/_recipe-builder' %}
+      {% endif %}
+
     </article>
 
     {% set vars = {'align' : 'right', 'featured' : 'false'} %}
