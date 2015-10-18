@@ -269,6 +269,10 @@
 
       .ingredients-title {
         margin-bottom: 0;
+
+        &.caps {
+          text-transform: uppercase;
+        }
       }
 
       .servings {

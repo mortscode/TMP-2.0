@@ -37,13 +37,13 @@
     {% if block.type == "recipe" %}
       <div class="builder__section builder--recipe top-double bot-double">
         <div class="builder__section--ingredients">
-          <h3 class="ingredients-title">{{ entry.title }}</h3>
+          <h3 class="ingredients-title caps">{{ entry.title }}</h3>
           <p class="servings">Serves {{ block.servings }}</p>
 
           {% if block.mainListTitle|length %}
-            <h4>{{ block.mainListTitle }}</h4>
+            <h3 class="ingredients-title">{{ block.mainListTitle }}</h3>
           {% else %}
-            <h4>Ingredients</h4>
+            <h3 class="ingredients-title">Ingredients</h3>
           {% endif %}
           
           <table class="ingredients-list" style="width:100%">
@@ -60,7 +60,7 @@
           </table>
           
           {% if block.secondaryListTitle|length %}
-            <h4>{{ block.secondaryListTitle }}</h4>
+            <h3 class="ingredients-title">{{ block.secondaryListTitle }}</h3>
           {% endif %}
           
           {% if block.secondaryIngredientsList|length %}
