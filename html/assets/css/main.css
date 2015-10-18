@@ -1092,7 +1092,8 @@ img, picture {
   .more-posts__title {
     color: #8c928c;
     margin-bottom: 1.5em;
-    text-align: center; }
+    text-align: center;
+    text-transform: none; }
   .more-posts__link {
     width: 23.7288135593%;
     float: left; }
