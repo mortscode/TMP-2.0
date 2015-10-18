@@ -10,7 +10,7 @@
     {% endif %}
 
     {% if block.type == "callout" %}
-      <div class="builder__section builder--callout top-{{ block.paddingTop}} bot-{{ block.paddingBottom }}">
+      <div class="builder__section builder--callout top-double bot-double m-top-{{ block.paddingTop }} m-bot-{{ block.paddingBottom }}">
         <div class="builder__section--callout">
           <hr class="bq-hr top">
           <blockquote class="text {{ block.textColor }} js-avoid-orphan">{{ block.text }}</blockquote>
