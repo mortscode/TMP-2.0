@@ -44,7 +44,7 @@
                 <tr class="row">
                   <td class="amount">{{ ingredient.amount }}</td>
                   {% if ingredient.linkUrl|length %}
-                    <td class="ingredient"><a href="{{ ingredient.linkUrl }}">{{ ingredient.ingredient }}</a></td>
+                    <td class="ingredient"><a href="{{ ingredient.linkUrl }}" target="_blank">{{ ingredient.ingredient }}</a></td>
                   {% else %}
                     <td class="ingredient">{{ ingredient.ingredient }}</td>
                   {% endif %}
