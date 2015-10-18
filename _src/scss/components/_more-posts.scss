@@ -6,7 +6,10 @@
     color: $tmp-gray;
     margin-bottom: $base-spacing;
     text-align: center;
-    text-transform: none;
+
+    &--text {
+      text-transform: none;
+    }
   }
 
   &__link {
