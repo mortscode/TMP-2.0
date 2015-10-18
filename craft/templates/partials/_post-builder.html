@@ -46,8 +46,8 @@
             <h4>Ingredients</h4>
           {% endif %}
           
+          <table class="ingredients-list" style="width:100%">
           {% for ingredient in block.mainIngredientsList %}
-            <table class="ingredients-list" style="width:100%">
               <tr class="row">
                 <td class="amount">{{ ingredient.amount }}</td>
                 {% if ingredient.linkUrl|length %}
@@ -56,16 +56,16 @@
                   <td class="ingredient">{{ ingredient.ingredient }}</td>
                 {% endif %}
               </tr>
-            </table>
           {% endfor %}
+          </table>
           
           {% if block.secondaryListTitle|length %}
             <h4>{{ block.secondaryListTitle }}</h4>
           {% endif %}
           
           {% if block.secondaryIngredientsList|length %}
+            <table class="ingredients-list" style="width:100%">
             {% for ingredient in block.secondaryIngredientsList %}
-              <table class="ingredients-list" style="width:100%">
                 <tr class="row">
                   <td class="amount">{{ ingredient.amount }}</td>
                   {% if ingredient.linkUrl|length %}
@@ -74,8 +74,8 @@
                     <td class="ingredient">{{ ingredient.ingredient }}</td>
                   {% endif %}
                 </tr>
-              </table>
             {% endfor %}
+            </table>
           {% endif %}
           <h3>Method</h3>
           <div class="method">
