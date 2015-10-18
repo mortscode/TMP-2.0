@@ -59,13 +59,32 @@
           {% endfor %}
           </table>
           
-          {% if block.secondaryListTitle|length %}
-            <h3 class="ingredients-title">{{ block.secondaryListTitle }}</h3>
+          {% if block.secondListTitle|length %}
+            <h3 class="ingredients-title">{{ block.secondListTitle }}</h3>
           {% endif %}
           
-          {% if block.secondaryIngredientsList|length %}
+          {% if block.secondIngredientsList|length %}
             <table class="ingredients-list" style="width:100%">
-            {% for ingredient in block.secondaryIngredientsList %}
+            {% for ingredient in block.secondIngredientsList %}
+                <tr class="row">
+                  <td class="amount">{{ ingredient.amount }}</td>
+                  {% if ingredient.linkUrl|length %}
+                    <td class="ingredient"><a href="{{ ingredient.linkUrl }}" target="_blank">{{ ingredient.ingredient }}</a></td>
+                  {% else %}
+                    <td class="ingredient">{{ ingredient.ingredient }}</td>
+                  {% endif %}
+                </tr>
+            {% endfor %}
+            </table>
+          {% endif %}
+
+          {% if block.thirdListTitle|length %}
+            <h3 class="ingredients-title">{{ block.thirdListTitle }}</h3>
+          {% endif %}
+          
+          {% if block.thirdIngredientsList|length %}
+            <table class="ingredients-list" style="width:100%">
+            {% for ingredient in block.thirdIngredientsList %}
                 <tr class="row">
                   <td class="amount">{{ ingredient.amount }}</td>
                   {% if ingredient.linkUrl|length %}

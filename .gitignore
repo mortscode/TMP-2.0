@@ -10,7 +10,9 @@ craft/storage/
 # Uploaded files
 # ----------------------------------------------------------------------
 html/assets/uploads/*
+html/assets/img/posts
 node_modules/
+data/
 
 # Misc files
 # ----------------------------------------------------------------------
