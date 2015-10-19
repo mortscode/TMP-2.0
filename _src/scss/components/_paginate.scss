@@ -1,13 +1,9 @@
 .paginate {
-  padding: $base-spacing 0;
-
-  @include breakpoint($vp2) {
-    padding: $base-spacing;
-  }
 
   &__link {
-    font-size: 130%;
+    font-size: 120%;
     font-style: italic;
+    margin: $base-spacing 0;
 
     @include breakpoint($vp1) {
       font-size: 100%;
