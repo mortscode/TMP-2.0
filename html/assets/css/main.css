@@ -1961,7 +1961,8 @@ body {
 .footer {
   background-color: #fff;
   padding: 1.5em 3.3613445378%;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  font-family: 'adelle-sans', -apple-system, sans-serif; }
   @media  (max-width: 960px) {
     .footer {
       padding: 0.75em 0;

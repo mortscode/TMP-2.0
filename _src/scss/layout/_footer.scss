@@ -2,6 +2,7 @@
   background-color: $white;
   padding: $base-spacing span(1 of 24);
   font-size: rem(14);
+  font-family: $sans;
 
   @include breakpoint($vp3) {
     padding: $small-spacing 0;
