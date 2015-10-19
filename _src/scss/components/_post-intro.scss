@@ -134,4 +134,26 @@
       }
     }
   }
+
+  &__author {
+
+    &--wrapper {
+      @include span(6);
+      @include push(4);
+      margin-top: $large-spacing;
+      margin-bottom: -$base-spacing;
+      text-align: center;
+
+      @include breakpoint($vp4) {
+        @include span(8);
+        @include push(2);
+      }
+    }
+
+    &--text {
+      color: darken($tmp-brand, 20%);
+    }
+
+
+  }
 }

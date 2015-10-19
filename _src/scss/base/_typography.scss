@@ -73,6 +73,19 @@ h4 {
   font-family: $sans;
 }
 
+h5 {
+  font-size: rem(21);
+  line-height: rem(24);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 1px;
+
+  @include breakpoint($vp2) {
+    font-size: rem(18);
+    line-height: rem(21);
+  }
+}
+
 p {
   font-size: rem(20);
   line-height: rem(32);

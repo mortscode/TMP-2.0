@@ -14,7 +14,7 @@
       </div>
 
         <div class="post__share">
-          {% set recipe = entry.postBuilder.type('recipe') %}
+          {% set recipe = entry.recipeStatus %}
           {% if recipe|length %}
           <a href="#" class="js-print-recipe"><div class="post__share--download btn pop small">Print Recipe</div></a>
           {% endif %}
@@ -23,6 +23,13 @@
       <div class="post__image--wrapper">
         <img src="{{ entry.featuredImage.first.url }}" alt="" class="post__image">
       </div>
+
+      {% if entry.postAuthor|length %}
+        <div class="post__author--wrapper">
+          <h5 class="post__author--text">Story by {{ entry.postAuthor }}</h5>
+        </div>
+      {% endif %}
+
       {% include 'partials/_post-builder' %}
 
       {% if entry.recipeStatus|length %}
