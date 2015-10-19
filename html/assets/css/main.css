@@ -1957,7 +1957,12 @@ body {
 
 .footer {
   background-color: #fff;
-  padding: 1.5em 3.3613445378%; }
+  padding: 1.5em 3.3613445378%;
+  font-size: 0.875rem; }
+  @media  (max-width: 960px) {
+    .footer {
+      padding: 0.75em 0;
+      text-align: center; } }
 
 @media print {
   body {
