@@ -1,5 +1,9 @@
 .paginate {
 
+  @include breakpoint($vp3) {
+    padding: 0 $small-spacing;
+  }
+
   &__link {
     font-size: 120%;
     font-style: italic;

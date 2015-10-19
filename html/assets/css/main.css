@@ -1192,6 +1192,9 @@ img, picture {
             font-size: 90%;
             line-height: 1.4; } }
 
+@media  (max-width: 960px) {
+  .paginate {
+    padding: 0 0.75em; } }
 .paginate__link {
   font-size: 120%;
   font-style: italic;
