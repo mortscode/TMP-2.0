@@ -1,5 +1,4 @@
 .post {
-  @include debug;
   @include span(10 wide);
   padding: $large-spacing $base-spacing;
   margin-top: $large-spacing;

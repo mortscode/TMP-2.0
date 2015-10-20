@@ -1219,7 +1219,6 @@ img, picture {
       margin-left: 0.75em; }
 
 .post {
-  border: 1px solid tomato;
   width: 84.7457627119%;
   float: left;
   margin-right: 1.6666666667%;
@@ -1613,6 +1612,30 @@ img, picture {
         display: block;
         width: 100%;
         height: auto; }
+    .builder__section--button {
+      width: 50.8474576271%;
+      float: left;
+      margin-right: 1.6666666667%;
+      margin-left: 33.8983050847%;
+      text-align: center; }
+      @media  (max-width: 1200px) {
+        .builder__section--button {
+          width: 49.1525423729%;
+          float: left;
+          margin-right: 1.6949152542%;
+          margin-left: 25.4237288136%; } }
+      @media  (max-width: 960px) {
+        .builder__section--button {
+          width: 66.1016949153%;
+          float: left;
+          margin-right: 1.6949152542%;
+          margin-left: 16.9491525424%; } }
+      @media  (max-width: 600px) {
+        .builder__section--button {
+          width: 83.0508474576%;
+          float: left;
+          margin-right: 1.6949152542%;
+          margin-left: 8.4745762712%; } }
     .builder__section--ingredients {
       width: 50.8474576271%;
       float: left;

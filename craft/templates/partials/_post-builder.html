@@ -34,6 +34,30 @@
       </div>
     {% endif %}
 
+    {% if block.type == "button" %}
+      <div class="builder__section builder--button top-{{ block.paddingTop}} bot-{{ block.paddingBottom}}">
+        <div class="builder__section--button">
+          {% set linkit = block.button %}
+          {% switch linkit.type %}
+
+              {% case "entry" %}
+
+                  <a href="{{ linkit.entry.url }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ linkit.color }}" title="{{ linkit.entry.title }}">{{ linkit.entry.title }}</a>
+
+              {% case "asset" %}
+
+                  <a href="{{ linkit.asset.url }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ linkit.color }}" title="{{ linkit.asset.title }}">
+                  </a>        
+
+              {% case "custom" %}
+
+                  <a href="{{ linkit.custom }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ block.color }}" title="{{ linkit.linkText }}">{{ linkit.linkText }}</a>
+
+          {% endswitch %}
+        </div>
+      </div>
+    {% endif %}
+
     {% if block.type == "recipe" %}
       <div class="builder__section builder--recipe top-double bot-double">
         <div class="builder__section--ingredients">
