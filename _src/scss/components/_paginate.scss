@@ -1,7 +1,7 @@
 .paginate {
 
   @include breakpoint($vp3) {
-    padding: 0 $small-spacing;
+    padding: 0 span(1);
   }
 
   &__link {
@@ -16,7 +16,7 @@
     &.prev {
       @include span(6);
 
-      .paginate__link--text { 
+      .paginate__link--text {
         &:before {
           content: "<<";
           margin-right: $small-spacing;
@@ -28,7 +28,7 @@
       @include span(last 6);
       text-align: right;
 
-      .paginate__link--text { 
+      .paginate__link--text {
         &:after {
           content: ">>";
           margin-left: $small-spacing;

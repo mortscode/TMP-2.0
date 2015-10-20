@@ -54,8 +54,8 @@ h2 {
   font-weight: 800;
 
   @include breakpoint($vp4) {
-    font-size: rem(30);
-    line-height: rem(36);
+    font-size: rem(26);
+    line-height: rem(32);
   }
 }
 

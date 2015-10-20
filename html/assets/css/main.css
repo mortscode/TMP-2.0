@@ -498,8 +498,8 @@ h2 {
   font-weight: 800; }
   @media  (max-width: 1200px) {
     h2 {
-      font-size: 1.875rem;
-      line-height: 2.25rem; } }
+      font-size: 1.625rem;
+      line-height: 2rem; } }
 
 h3 {
   font-size: 1.125rem;
@@ -651,11 +651,11 @@ img, picture {
       width: 23.7288135593%;
       float: left;
       margin-right: 1.6949152542%; } }
-  @media  (max-width: 1200px) {
+  @media  (max-width: 960px) {
     .aside-column.left {
-      width: 23.7288135593%;
+      width: 28.5714285714%;
       float: left;
-      margin-right: 1.6949152542%; } }
+      margin-right: 0.8403361345%; } }
   @media  (max-width: 600px) {
     .aside-column.left {
       display: none; } }
@@ -1194,7 +1194,7 @@ img, picture {
 
 @media  (max-width: 960px) {
   .paginate {
-    padding: 0 0.75em; } }
+    padding: 0 6.7796610169%; } }
 .paginate__link {
   font-size: 120%;
   font-style: italic;
@@ -1219,6 +1219,7 @@ img, picture {
       margin-left: 0.75em; }
 
 .post {
+  border: 1px solid tomato;
   width: 84.7457627119%;
   float: left;
   margin-right: 1.6666666667%;
@@ -1276,7 +1277,7 @@ img, picture {
             -ms-transform: translateY(-5px);
                 transform: translateY(-5px); }
     .post__title--text {
-      width: 49.1525423729%;
+      width: 57.6271186441%;
       float: left;
       margin-right: 1.6949152542%;
       margin-left: 4.2016806723%;
@@ -1304,7 +1305,7 @@ img, picture {
           margin-right: 1.6949152542%;
           margin-left: 8.4745762712%; } }
   .post__share {
-    width: 15.9663865546%;
+    width: 20.1680672269%;
     float: left;
     margin-right: 0.8403361345%;
     margin-left: 4.2016806723%; }
@@ -1337,14 +1338,12 @@ img, picture {
     position: absolute;
     width: 100%;
     height: auto;
-    top: 0;
-    left: 0;
-    right: 0; }
+    top: 0; }
     .post__image--wrapper {
-      width: 59.3220338983%;
+      width: 50.8474576271%;
       float: left;
       margin-right: 1.6666666667%;
-      margin-left: 9.243697479%;
+      margin-left: 8.4745762712%;
       position: relative;
       background-color: #fff; }
       @media  (max-width: 1200px) {
@@ -1367,9 +1366,9 @@ img, picture {
         display: block;
         padding-bottom: 150%; }
   .post__author--wrapper {
-    width: 49.1525423729%;
+    width: 50.8474576271%;
     float: left;
-    margin-right: 1.6949152542%;
+    margin-right: 1.6666666667%;
     margin-left: 33.8983050847%;
     margin-top: 3em;
     margin-bottom: -1.5em;
@@ -2083,7 +2082,7 @@ body {
       margin-left: 4.2016806723%; } }
   @media  (max-width: 960px) {
     .home-posts {
-      width: 74.5762711864%;
+      width: 66.3865546218%;
       float: right;
       margin-right: 0;
       margin-left: 0%; } }
@@ -2113,16 +2112,12 @@ body {
         color: #8c928c;
         text-decoration: none; }
     .home-posts .post-summary .post-image-wrapper {
-      width: 66.1016949153%;
+      width: 55.4621848739%;
       float: left;
-      margin-right: 1.6949152542%;
+      margin-right: 0.826446281%;
+      margin-left: 4.2016806723%;
       position: relative;
       background-color: #fff; }
-      @media  (max-width: 1200px) {
-        .home-posts .post-summary .post-image-wrapper {
-          width: 57.6271186441%;
-          float: left;
-          margin-right: 1.6949152542%; } }
       @media  (max-width: 960px) {
         .home-posts .post-summary .post-image-wrapper {
           width: 83.0508474576%;
@@ -2151,12 +2146,12 @@ body {
         left: 0;
         right: 0; }
     .home-posts .post-summary .post-description {
-      width: 32.2033898305%;
+      width: 33.8983050847%;
       float: left;
-      margin-right: 1.6949152542%;
-      margin-left: 69.4915254237%;
+      margin-right: 1.6666666667%;
       position: absolute;
       top: 50%;
+      right: 0;
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
@@ -2194,6 +2189,9 @@ body {
                   transform: translateY(-5px); }
       .home-posts .post-summary .post-description .post-link {
         margin-top: 1.5em; }
+        @media  (max-width: 1200px) {
+          .home-posts .post-summary .post-description .post-link {
+            font-size: 90%; } }
         @media  (max-width: 400px) {
           .home-posts .post-summary .post-description .post-link {
             width: 100%;
