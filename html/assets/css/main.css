@@ -1548,22 +1548,22 @@ img, picture {
             margin-right: 0;
             margin-left: 0%; } }
       .builder__section--photos.normal {
-        width: 67.7966101695%;
+        width: 50.8474576271%;
         float: left;
         margin-right: 1.6666666667%;
-        margin-left: 25.4237288136%; }
+        margin-left: 33.8983050847%; }
         @media  (max-width: 1200px) {
+          .builder__section--photos.normal {
+            width: 49.1525423729%;
+            float: left;
+            margin-right: 1.6949152542%;
+            margin-left: 25.4237288136%; } }
+        @media  (max-width: 960px) {
           .builder__section--photos.normal {
             width: 66.1016949153%;
             float: left;
             margin-right: 1.6949152542%;
             margin-left: 16.9491525424%; } }
-        @media  (max-width: 960px) {
-          .builder__section--photos.normal {
-            width: 83.0508474576%;
-            float: left;
-            margin-right: 1.6949152542%;
-            margin-left: 8.4745762712%; } }
         @media  (max-width: 600px) {
           .builder__section--photos.normal {
             width: 100%;
@@ -1572,22 +1572,22 @@ img, picture {
             margin-right: 0;
             margin-left: 0%; } }
       .builder__section--photos.slim {
-        width: 50.8474576271%;
+        width: 33.8983050847%;
         float: left;
         margin-right: 1.6666666667%;
-        margin-left: 33.8983050847%; }
+        margin-left: 42.3728813559%; }
         @media  (max-width: 1200px) {
+          .builder__section--photos.slim {
+            width: 40.6779661017%;
+            float: left;
+            margin-right: 1.6949152542%;
+            margin-left: 29.4117647059%; } }
+        @media  (max-width: 960px) {
           .builder__section--photos.slim {
             width: 49.1525423729%;
             float: left;
             margin-right: 1.6949152542%;
             margin-left: 25.4237288136%; } }
-        @media  (max-width: 960px) {
-          .builder__section--photos.slim {
-            width: 66.1016949153%;
-            float: left;
-            margin-right: 1.6949152542%;
-            margin-left: 16.9491525424%; } }
         @media  (max-width: 600px) {
           .builder__section--photos.slim {
             width: 83.0508474576%;

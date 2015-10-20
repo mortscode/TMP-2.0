@@ -178,26 +178,6 @@
       }
 
       &.normal {
-        @include span(8 wide);
-        @include push(3);
-
-        @include breakpoint($vp4) {
-          @include span(8);
-          @include push(2);
-        }
-
-        @include breakpoint($vp3) {
-          @include span(10);
-          @include push(1);
-        }
-
-        @include breakpoint($vp2) {
-          @include span(12);
-          @include push(0);
-        }
-      }
-
-      &.slim {
         @include span(6 wide);
         @include push(4);
 
@@ -209,6 +189,26 @@
         @include breakpoint($vp3) {
           @include span(8);
           @include push(2);
+        }
+
+        @include breakpoint($vp2) {
+          @include span(12);
+          @include push(0);
+        }
+      }
+
+      &.slim {
+        @include span(4 wide);
+        @include push(5);
+
+        @include breakpoint($vp4) {
+          @include span(5);
+          @include push(7 of 24);
+        }
+
+        @include breakpoint($vp3) {
+          @include span(6);
+          @include push(3);
         }
 
         @include breakpoint($vp2) {
