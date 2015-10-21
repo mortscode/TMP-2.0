@@ -1487,6 +1487,8 @@ img, picture {
           float: left;
           margin-right: 1.6949152542%;
           margin-left: 8.4745762712%; } }
+    .builder__section--text p:last-child {
+      margin-bottom: 0; }
     .builder__section--callout {
       width: 67.7966101695%;
       float: left;

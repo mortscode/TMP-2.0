@@ -101,6 +101,12 @@
       }
     }
 
+    &--text p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     &--callout {
       @include span(8 wide);
       @include push(3);
