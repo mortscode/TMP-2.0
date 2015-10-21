@@ -42,11 +42,11 @@
 
               {% case "entry" %}
 
-                  <a href="{{ linkit.entry.url }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ linkit.color }}" title="{{ linkit.entry.title }}">{{ linkit.entry.title }}</a>
+                  <a href="{{ linkit.entry.url }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ block.color }}" title="{{ linkit.entry.title }}">{{ linkit.entry.title }}</a>
 
               {% case "asset" %}
 
-                  <a href="{{ linkit.asset.url }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ linkit.color }}" title="{{ linkit.asset.title }}">{{ linkit.linkText }}</a>        
+                  <a href="{{ linkit.asset.url }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ block.color }}" title="{{ linkit.asset.title }}">{{ linkit.linkText }}</a>        
 
               {% case "custom" %}
 
