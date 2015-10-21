@@ -21,6 +21,10 @@
   white-space: nowrap;
   transition: background-color $quick-ease;
 
+  @include breakpoint($vp2) {
+    font-size: rem(13);
+  }
+
   &.pop {
     background-color: $action-color;
 

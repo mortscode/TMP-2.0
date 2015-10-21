@@ -332,6 +332,9 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .btn {
   vertical-align: middle;
   white-space: nowrap;
   transition: background-color 200ms ease-in-out; }
+  @media  (max-width: 600px) {
+    button, input[type="button"], input[type="reset"], input[type="submit"], .btn {
+      font-size: 0.8125rem; } }
   button.pop, input[type="button"].pop, input[type="reset"].pop, input[type="submit"].pop, .btn.pop {
     background-color: #ef9573; }
     button.pop:hover, button.pop:focus, input[type="button"].pop:hover, input[type="button"].pop:focus, input[type="reset"].pop:hover, input[type="reset"].pop:focus, input[type="submit"].pop:hover, input[type="submit"].pop:focus, .btn.pop:hover, .btn.pop:focus {
@@ -561,6 +564,10 @@ blockquote {
     blockquote {
       font-size: 2.25rem;
       line-height: 3rem; } }
+  @media  (max-width: 600px) {
+    blockquote {
+      font-size: 1.875rem;
+      line-height: 2.625rem; } }
 
 .cite {
   font-size: 1.5rem;
