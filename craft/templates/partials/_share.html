@@ -7,7 +7,11 @@
       <a href="{{'https://twitter.com/share?text=' ~ entry.title ~ ' from @themodernproper:&' ~ entry.url }}" target="_blank">
           <div class="share__icon"><span class="icon-logo twitter"></span></div>
       </a>
-      <a href="#"><div class="share__icon"><span class="icon-logo facebook"></span></div></a>
-      <a href="{{ pinterestLink }}" target="_blank" count-layout="none"><div class="share__icon"><span class="icon-logo pinterest"></span></div></a>
+      <div id="fb-root" style="display:none;"></div>
+      <a href="{{ entry.url }}" data-image="{{ siteUrl ~ entry.featuredImage.first.url }}" data-title="{{ entry.title }}" data-desc="{{ entry.postSummary }}" class="fb_share">
+          <div class="share__icon"><span class="icon-logo facebook"></span></div>
+      </a>
+      {# <a href="#"><div class="share__icon"><span class="icon-logo facebook"></span></div></a> #}
+      {# <a href="{{ pinterestLink }}" target="_blank" count-layout="none"><div class="share__icon"><span class="icon-logo pinterest"></span></div></a> #}
     </div>
 </div>

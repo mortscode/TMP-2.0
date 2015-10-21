@@ -28,7 +28,7 @@
     color: $white;
     width: 25%;
     max-width: $large-spacing;
-    margin: $base-spacing 3%;
+    margin: $base-spacing 4%;
     border-radius: 100%;
     transition: background-color $quick-ease;
 
@@ -63,7 +63,7 @@
         opacity: 0.9;
       }
 
-      &.pinterest {
+      &.pins {
         background-image: url("/assets/img/icons/pinterest.svg");
         opacity: 0.9;
       }

@@ -1810,7 +1810,7 @@ img, picture {
     color: #fff;
     width: 25%;
     max-width: 3em;
-    margin: 1.5em 3%;
+    margin: 1.5em 4%;
     border-radius: 100%;
     transition: background-color 200ms ease-in-out; }
     .share__icon:after {
@@ -1839,7 +1839,7 @@ img, picture {
       .share__icon .icon-logo.facebook {
         background-image: url("/assets/img/icons/facebook.svg");
         opacity: 0.9; }
-      .share__icon .icon-logo.pinterest {
+      .share__icon .icon-logo.pins {
         background-image: url("/assets/img/icons/pinterest.svg");
         opacity: 0.9; }
     .share__icon:hover {
