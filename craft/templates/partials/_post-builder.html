@@ -46,7 +46,7 @@
 
               {% case "asset" %}
 
-                  <a href="{{ linkit.asset.url }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ block.color }}" title="{{ linkit.asset.title }}">{{ linkit.linkText }}</a>        
+                  <a href="{{ linkit.asset.url }}" {{ linkit.target ? ' target="_blank"' }} class="btn {{ block.color }}" title="{{ linkit.asset.title }}" download>{{ linkit.linkText }}</a>        
 
               {% case "custom" %}
 
