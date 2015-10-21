@@ -611,7 +611,7 @@ img, picture {
   font-style: italic;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: 0.75em; }
+  margin-top: 1.5em; }
 .builder p a, .about p a {
   font-style: italic; }
   .builder p a:active, .builder p a:focus, .builder p a:hover, .about p a:active, .about p a:focus, .about p a:hover {
