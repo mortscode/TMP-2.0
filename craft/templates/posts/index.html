@@ -20,7 +20,7 @@
             <a class="posts__result--item" href="{{ entry.url }}">
             <div class="posts__result" style="background-image:url('{{ entry.featuredImage.first.url }}');">
                 <p class="posts__result--date">{{ entry.postDate|date("M j, Y") }}</p>
-                <h3 class="posts__result--title js-avoid-orphan">{{ entry.title }}</h3>
+                <h3 class="posts__result--title">{{ entry.title }}</h3>
             </div>
             </a>
           {% endfor %}

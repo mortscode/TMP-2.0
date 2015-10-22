@@ -48,20 +48,37 @@
   }
 
   &.mobile {
+    z-index: $z-search;
     display: none;
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-    margin: $base-spacing 0;
+    max-height: 50px;
+    position: fixed;
+    top: 0;
+    left: 55px;
+    right: 100%;
+    overflow: hidden;
+    transition: right $med-ease;
+    visibility: hidden;
 
     @include breakpoint($vp3) {
       display: block;
     }
 
+    @include breakpoint($vp2) {
+      left: 40px;
+    }
+
     .__form {
       width: 100%;
+      height: 50px;
       padding: ($small-spacing / 2) $small-spacing;
       z-index: $z-search;
+      font-size: rem(20);
+      background-color: lighten($tmp-light, 5%);
+      border-bottom: 1px solid rgba($tmp-gray, 0.5);
+
+      @include breakpoint($vp2) {
+        height: 40px;
+      }
     }
 
     .__submit {
@@ -70,12 +87,53 @@
       top: 0;
       height: 100%;
       padding: 0 !important;
-      width: 40px;
+      width: 50px;
       background-color: rgba($tmp-gray, 0.5);
       background-image: url("/assets/img/icons/go-icon.svg");
       background-repeat: no-repeat;
       background-size: auto 60%;
       background-position: 50% 50%;
+
+      @include breakpoint($vp2) {
+        width: 40px;
+      }
     }
+
+    &.is-open {
+      visibility: visible;
+      right: 55px;
+
+      @include breakpoint($vp2) {
+        right: 40px;
+      }
+    }
+  }
+}
+
+.m-search-btn {
+  z-index: $z-search;
+  position: fixed;
+  top: 0;
+  left: 5px;
+  height: 50px;
+  width: 50px;
+  background-image: url("/assets/img/icons/search-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 50% 50%;
+  background-color: $white;
+  opacity: 0.4;
+  transition: opacity $quick-ease;
+
+  @include breakpoint($vp2) {
+    left: 0;
+    height: 40px;
+    width: 40px;
+  }
+
+  &.close {
+    background-image: url("/assets/img/icons/close-icon.svg");
+    background-size: 30%;
+    opacity: 0.5;
   }
 }

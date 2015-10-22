@@ -5,6 +5,20 @@
     display: block;
   }
 
+  .m-nav-box {
+    z-index: $z-m-nav-box;
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: $white;
+
+    @include breakpoint($vp2) {
+      height: 40px;
+    }
+  }
+
   .m-nav-menu {
     z-index: $z-m-nav-menu;
     background-color: $white;
@@ -33,7 +47,7 @@
       transform: translateY(-$large-spacing);
       max-width: 400px;
       margin: 0 auto;
-      padding: em(60) $large-spacing;
+      padding: em(80) $large-spacing;
       transition: transform $med-ease, opacity $quick-ease;
 
       @include breakpoint($vp-short) {
@@ -137,11 +151,11 @@
     border: none;
 
     @include breakpoint($vp3) {
-      top: 0;
+      top: 2px;
     }
 
     @include breakpoint($vp2) {
-      right: 0;
+      right: 5px;
     }
 
     &:hover {

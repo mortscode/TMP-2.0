@@ -8,10 +8,10 @@
 {% block content %}
   <div class="grid">
     <div class="search">
-      <h2 class="search__title">Matching Posts</h2>
-      
       {% set query = craft.request.getParam('q') %}
       {% set entries = craft.entries.section('postEntries').search(query).order('score') %}
+
+      <h2 class="search__title">Posts matching "{{ query }}"</h2>
       
       {% if entries|length %}
         {# <p>{{ entries|length }} results:</p> #}

@@ -1,4 +1,6 @@
 .home-intro {
+  z-index: $z-home-intro;
+  position: relative;
 
   &__top {
     background-color: $tmp-light;
@@ -11,7 +13,7 @@
     }
 
     @include breakpoint($vp3) {
-      padding: em(14) 0 em(16);
+      padding: em(13) 0 em(17);
     }
 
     .logo-wrapper {
@@ -47,6 +49,7 @@
 
     @include breakpoint($vp3) {
       padding: em(40) 0 em(20);
+      background-color: $white;
     }
 
     .tagline-text {
