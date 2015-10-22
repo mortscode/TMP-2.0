@@ -1842,7 +1842,6 @@ img, picture {
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: 50% 50%;
-  background-color: #fff;
   opacity: 0.4;
   transition: opacity 200ms ease-in-out; }
   @media  (max-width: 600px) {
