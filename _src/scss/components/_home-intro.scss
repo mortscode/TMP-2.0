@@ -13,7 +13,13 @@
     }
 
     @include breakpoint($vp3) {
-      padding: em(13) 0 em(17);
+      padding: em(15) 0;
+      height: 50px;
+    }
+
+    @include breakpoint($vp2) {
+      padding: em(10) 0;
+      max-height: 40px;
     }
 
     .logo-wrapper {
@@ -28,6 +34,10 @@
 
       @include breakpoint($vp3) {
         height: rem(14);
+      }
+
+      @include breakpoint($vp3) {
+        height: rem(13);
       }
 
       .logotype {

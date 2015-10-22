@@ -799,7 +799,12 @@ img, picture {
         padding: 1.5em 0; } }
     @media  (max-width: 960px) {
       .home-intro__top {
-        padding: 0.8125em 0 1.0625em; } }
+        padding: 0.9375em 0;
+        height: 50px; } }
+    @media  (max-width: 600px) {
+      .home-intro__top {
+        padding: 0.625em 0;
+        max-height: 40px; } }
     .home-intro__top .logo-wrapper {
       display: block;
       height: 1.125rem;
@@ -811,6 +816,9 @@ img, picture {
       @media  (max-width: 960px) {
         .home-intro__top .logo-wrapper {
           height: 0.875rem; } }
+      @media  (max-width: 960px) {
+        .home-intro__top .logo-wrapper {
+          height: 0.8125rem; } }
       .home-intro__top .logo-wrapper .logotype {
         height: 100%;
         width: auto; }
