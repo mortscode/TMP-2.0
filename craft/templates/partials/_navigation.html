@@ -6,6 +6,9 @@
     {% if navView == "desktop" %}
       <li class="search-wrapper js-search-toggle"></li>
     {% endif %}
+    {% if navView == "mobile" %}
+      <a href="/" title="Home"><li class="nav-item">Home</li></a>
+    {% endif %}
     {% for navLink in mainNavigation.navigationItems %}
       {% set link = navLink.linkInfo %}
       <a href="{{ link.url }}" {{ link.target ? ' target="_blank"' }} title="{{ link.linkText }}"><li class="nav-item">{{ link.linkText }}</li></a>
