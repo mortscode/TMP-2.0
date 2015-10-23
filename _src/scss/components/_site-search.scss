@@ -75,7 +75,7 @@
       padding: ($small-spacing / 2) 40px ($small-spacing / 2) $small-spacing;
       z-index: $z-search;
       font-size: rem(16);
-      background-color: $tmp-light;
+      background-color: darken($tmp-light, 3%);
 
       @include breakpoint($vp2) {
         height: 28px;

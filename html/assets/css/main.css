@@ -1819,7 +1819,7 @@ img, picture {
     padding: 0.375em 40px 0.375em 0.75em;
     z-index: 8765320;
     font-size: 1rem;
-    background-color: #f2f2f2; }
+    background-color: #eaeaea; }
     @media  (max-width: 600px) {
       .site-search.mobile .__form {
         height: 28px; } }
