@@ -1,6 +1,9 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  #301 Redirects
+  RewriteRule ^post\/\d+\/(.*)$ http://dev.themodernproper.com/posts/$1 [L,R=301, NE]
+
   # Send would-be 404 requests to Craft
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
