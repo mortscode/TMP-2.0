@@ -26,7 +26,8 @@ $(document).ready(function() {
 
   $('.js-search-toggle').on('click', function(){
     $('.site-search').toggleClass('is-open');
-    $('#js-search').focus();
+    $('.js-search').focus();
+    $('.js-header-logo').toggleClass('hide');
     $(this).toggleClass('close');
   });
 });

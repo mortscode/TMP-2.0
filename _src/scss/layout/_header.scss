@@ -15,10 +15,6 @@
     right: 0;
     width: 100%;
 
-    @include breakpoint($vp3) {
-      position: relative;
-    }
-
     .tmp-logo-wrapper {
       opacity: 1;
     }
@@ -41,7 +37,12 @@
       z-index: $z-m-nav;
       height: em(60);
       width: em(60);
-      opacity: 1;
+    }
+
+    @include breakpoint($vp2) {
+      z-index: $z-m-nav;
+      height: em(45);
+      width: em(45);
     }
 
     .tmp-logo {

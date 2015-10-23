@@ -832,7 +832,7 @@ img, picture {
         padding: 3.75em 0 0; } }
     @media  (max-width: 960px) {
       .home-intro__tagline {
-        padding: 2.5em 0 1.25em;
+        padding: 2.5em 0 0;
         background-color: #fff; } }
     .home-intro__tagline .tagline-text {
       width: 49.1525423729%;
@@ -1265,7 +1265,8 @@ img, picture {
       padding: 3em 0; } }
   @media  (max-width: 600px) {
     .post {
-      margin-top: 1.5em; } }
+      margin-top: 1.5em;
+      padding: 1.5em 0; } }
   .post__title {
     clear: both;
     width: 100%;
@@ -1376,6 +1377,10 @@ img, picture {
       position: relative;
       background-color: #fff; }
       @media  (max-width: 1200px) {
+        .post__image--wrapper {
+          margin-left: 25.4237288136%;
+          margin-top: 1.5em; } }
+      @media  (max-width: 960px) {
         .post__image--wrapper {
           width: 66.1016949153%;
           float: left;
@@ -1792,9 +1797,9 @@ img, picture {
 .site-search.mobile {
   z-index: 8765320;
   display: none;
-  max-height: 50px;
+  height: 34px;
   position: fixed;
-  top: 0;
+  top: 7px;
   left: 55px;
   right: 100%;
   overflow: hidden;
@@ -1805,39 +1810,40 @@ img, picture {
       display: block; } }
   @media  (max-width: 600px) {
     .site-search.mobile {
+      max-height: 28px;
+      top: 6;
       left: 40px; } }
   .site-search.mobile .__form {
     width: 100%;
-    height: 50px;
-    padding: 0.375em 0.75em;
+    height: 36px;
+    padding: 0.375em 40px 0.375em 0.75em;
     z-index: 8765320;
-    font-size: 1.25rem;
-    background-color: white;
-    border-bottom: 1px solid rgba(140, 146, 140, 0.5); }
+    font-size: 1rem;
+    background-color: #f2f2f2; }
     @media  (max-width: 600px) {
       .site-search.mobile .__form {
-        height: 40px; } }
+        height: 28px; } }
   .site-search.mobile .__submit {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
     padding: 0 !important;
-    width: 50px;
+    width: 36px;
     background-color: rgba(140, 146, 140, 0.5);
     background-image: url("/assets/img/icons/go-icon.svg");
     background-repeat: no-repeat;
-    background-size: auto 60%;
+    background-size: auto 45%;
     background-position: 50% 50%; }
     @media  (max-width: 600px) {
       .site-search.mobile .__submit {
-        width: 40px; } }
+        width: 28px; } }
   .site-search.mobile.is-open {
     visibility: visible;
     right: 55px; }
     @media  (max-width: 600px) {
       .site-search.mobile.is-open {
-        right: 40px; } }
+        right: 45px; } }
 
 .m-search-btn {
   z-index: 8765320;
@@ -1942,9 +1948,6 @@ body {
     left: 0;
     right: 0;
     width: 100%; }
-    @media  (max-width: 960px) {
-      .site-header.stuck {
-        position: relative; } }
     .site-header.stuck .tmp-logo-wrapper {
       opacity: 1; }
   .site-header .tmp-logo-wrapper {
@@ -1965,8 +1968,12 @@ body {
       .site-header .tmp-logo-wrapper {
         z-index: 8765320;
         height: 3.75em;
-        width: 3.75em;
-        opacity: 1; } }
+        width: 3.75em; } }
+    @media  (max-width: 600px) {
+      .site-header .tmp-logo-wrapper {
+        z-index: 8765320;
+        height: 2.8125em;
+        width: 2.8125em; } }
     .site-header .tmp-logo-wrapper .tmp-logo {
       position: absolute;
       width: 70%;

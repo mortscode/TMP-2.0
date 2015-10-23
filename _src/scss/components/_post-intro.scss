@@ -11,6 +11,7 @@
 
   @include breakpoint($vp2) {
     margin-top: $base-spacing;
+    padding: $base-spacing 0;
   }
 
   &__title {
@@ -114,6 +115,11 @@
       background-color: $white;
 
       @include breakpoint($vp4) {
+        @include push(3);
+        margin-top: $base-spacing;
+      }
+
+      @include breakpoint($vp3) {
         @include span(8);
         @include push(2);
         margin-top: $base-spacing;

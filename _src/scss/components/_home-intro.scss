@@ -58,7 +58,7 @@
     }
 
     @include breakpoint($vp3) {
-      padding: em(40) 0 em(20);
+      padding: em(40) 0 0;
       background-color: $white;
     }
 
