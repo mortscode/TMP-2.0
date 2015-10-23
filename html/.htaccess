@@ -2,7 +2,7 @@
   RewriteEngine On
 
   #301 Redirects
-  RewriteRule ^post\/\d+\/(.*)$ http://dev.themodernproper.com/posts/$1 [L,R=301, NE]
+  RewriteRule ^post\/(\d+)\/(.*)$ http://dev.themodernproper.com/posts/$2 [L,R=301]
 
   # Send would-be 404 requests to Craft
   RewriteCond %{REQUEST_FILENAME} !-f
