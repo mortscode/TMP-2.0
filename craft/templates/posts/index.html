@@ -21,8 +21,8 @@
     <div class="posts-filter">
       <div class="filter__wrapper">
         <div class="filter__arrow"></div>
-        <label class="label" for="Year">Filter by Year</label>
         <select class="filter" name="Year" onchange="location = this.options[this.selectedIndex].value;">
+          <option disabled="disabled" selected="selected">Select Year</option>
           {% for year in now.year .. firstEntryEver.postDate.year %}
             <option value="/posts/{{ year }}">{{ year }}</option>
           {% endfor %}
@@ -37,7 +37,7 @@
       {% for month, entries in entriesInYear | group("postDate|date('F')") %}
         <div class="posts__result--item" href="#">
           <div class="posts__result month">
-            <h3 class="month__title">{{ month }}</h3>
+            <h3 class="month__title">{{ month }} {{ year }}</h3>
           </div>
         </div>
         {% for entry in entries %}

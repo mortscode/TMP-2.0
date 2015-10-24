@@ -795,14 +795,6 @@ img, picture {
   @media  (max-width: 600px) {
     .posts-filter {
       margin-bottom: -1.5em; } }
-  @media  (max-width: 400px) {
-    .posts-filter {
-      clear: both;
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
-      margin-left: 0%; } }
   .posts-filter .label {
     color: #727972;
     font-style: italic;
@@ -849,7 +841,7 @@ img, picture {
       display: block;
       position: absolute;
       right: 0;
-      top: 50%;
+      top: 3px;
       bottom: 3px;
       left: 87.3949579832%;
       border-left: 1px solid #f2f2f2;
@@ -2404,14 +2396,6 @@ body {
   margin-right: 0.8403361345%;
   margin-left: 4.2016806723%;
   padding-top: 3em; }
-  @media  (max-width: 400px) {
-    .posts, .search {
-      clear: both;
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
-      margin-left: 0%; } }
   .posts__title, .search__title {
     color: #8c928c; }
     .posts__title::after, .search__title::after {
@@ -2449,10 +2433,12 @@ body {
     .posts__result:hover, .search__result:hover {
       -webkit-filter: grayscale(0);
               filter: grayscale(0); }
-      .posts__result:hover .search__result--title, .search__result:hover .search__result--title {
-        color: #f7c9b8; }
+      .posts__result:hover .posts__result--title, .posts__result:hover .search__result--title, .search__result:hover .posts__result--title, .search__result:hover .search__result--title {
+        color: #ef9573; }
+      .posts__result:hover .posts__result--date, .posts__result:hover .search__result--date, .search__result:hover .posts__result--date, .search__result:hover .search__result--date {
+        background-color: rgba(140, 146, 140, 0.9); }
     .posts__result.month, .search__result.month {
-      background-color: #d8d8d8;
+      background-color: #e5e5e5;
       color: #8c928c; }
       .posts__result.month .month__title, .search__result.month .month__title {
         position: absolute;
@@ -2462,7 +2448,12 @@ body {
         -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
-        font-size: 200%; }
+        font-size: 200%;
+        line-height: 1.4;
+        padding: 0 0.75em; }
+        @media  (max-width: 600px) {
+          .posts__result.month .month__title, .search__result.month .month__title {
+            font-size: 175%; } }
     .posts__result--item, .search__result--item {
       width: 23.7288135593%;
       float: left;

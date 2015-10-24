@@ -7,11 +7,6 @@
     margin-bottom: -$base-spacing;
   }
 
-  @include breakpoint($vp1) {
-    @include full;
-    @include push(0);
-  }
-
   .label {
     color: darken($tmp-gray, 10%);
     font-style: italic;
@@ -56,7 +51,7 @@
       display: block;
       position: absolute;
       right: 0;
-      top: 50%;
+      top: 3px;
       bottom: 3px;
       left: span(21 of 24);
       border-left: 1px solid $tmp-light;
