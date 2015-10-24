@@ -8,26 +8,48 @@
 
 {% block content %}
 	<div class="grid">
-    <div class="posts">
-      <h2 class="posts__title">Post Archive</h2>
+    {% if year is not defined %}
+      {% set year = now.year %}
+    {% endif %}
 
-      {% set entries = craft.entries.section('postEntries') %}
-      
-      {% if entries|length %}
-        {# <p>{{ entries|length }} results:</p> #}
-        <div class="posts__results">
-          {% for entry in entries %}
-            <a class="posts__result--item" href="{{ entry.url }}">
-            <div class="posts__result" style="background-image:url('{{ entry.featuredImage.first.url }}');">
-                <p class="posts__result--date">{{ entry.postDate|date("M j, Y") }}</p>
-                <h3 class="posts__result--title">{{ entry.title }}</h3>
-            </div>
-            </a>
+    {% if year is not defined %}
+      {% redirect "posts/"~now.year %}
+    {% endif %}
+
+    {% set firstEntryEver = craft.entries.section('postEntries').order('postDate asc').first() %}
+    
+    <div class="posts-filter">
+      <div class="filter__wrapper">
+        <div class="filter__arrow"></div>
+        <label class="label" for="Year">Filter by Year</label>
+        <select class="filter" name="Year" onchange="location = this.options[this.selectedIndex].value;">
+          {% for year in now.year .. firstEntryEver.postDate.year %}
+            <option value="/posts/{{ year }}">{{ year }}</option>
           {% endfor %}
+        </select>
+      </div>
+    </div>
+
+    <div class="posts">
+      {# <h1 class="posts__title">{{ year }} Post Archive</h1> #}
+      <div class="posts__results">
+      {% set entriesInYear = craft.entries.section('postEntries').limit(null).after(year).before(year+1) %}
+      {% for month, entries in entriesInYear | group("postDate|date('F')") %}
+        <div class="posts__result--item" href="#">
+          <div class="posts__result month">
+            <h3 class="month__title">{{ month }}</h3>
+          </div>
         </div>
-      {% else %}
-        <p>Sorry. Your search for “{{ query }}” didn’t return any results.</p>
-      {% endif %}
+        {% for entry in entries %}
+        <a class="posts__result--item" href="{{ entry.url }}">
+          <div class="posts__result" style="background-image:url('{{ entry.featuredImage.first.url }}');">
+              <p class="posts__result--date">{{ entry.postDate|date("M j, Y") }}</p>
+              <h3 class="posts__result--title">{{ entry.title }}</h3>
+          </div>
+        </a>
+        {% endfor %}
+      {% endfor %}
+      </div>
     </div>
   </div>
 {% endblock %}

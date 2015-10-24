@@ -20,7 +20,7 @@
 
   &__results {
     @include full;
-    @include clearfix; 
+    @include clearfix;
   }
 
   &__result {
@@ -44,6 +44,20 @@
 
       .search__result--title {
         color: $tmp-brand;
+      }
+    }
+
+    &.month {
+      background-color: darken($tmp-light, 10%);
+      color: $tmp-gray;
+
+      .month__title {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        font-size: 200%;
       }
     }
 

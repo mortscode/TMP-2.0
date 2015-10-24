@@ -1,0 +1,80 @@
+.posts-filter {
+  @include span(22 of 24);
+  @include push(1 of 24);
+  padding-top: $large-spacing;
+
+  @include breakpoint($vp2) {
+    margin-bottom: -$base-spacing;
+  }
+
+  @include breakpoint($vp1) {
+    @include full;
+    @include push(0);
+  }
+
+  .label {
+    color: darken($tmp-gray, 10%);
+    font-style: italic;
+    text-align: center;
+  }
+
+  .filter {
+    padding: ($small-spacing / 2) $small-spacing;
+    background: $tmp-gray;
+    color: $white;
+    width: 100%;
+    text-align: center;
+    font-size: rem(20);
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    margin-bottom: 0;
+    transition: background $quick-ease;
+
+    &__wrapper {
+      @include span(3);
+      position: relative;
+
+      @include breakpoint($vp4) {
+        @include span(4);
+      }
+
+      @include breakpoint($vp3) {
+        @include span(6 narrow);
+      }
+
+      @include breakpoint($vp2) {
+        @include full;
+      }
+    }
+
+    &__arrow {
+      content: "@";
+      color: $white;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      bottom: 3px;
+      left: span(21 of 24);
+      border-left: 1px solid $tmp-light;
+      pointer-events: none;
+      background-image: url("/assets/img/icons/filter-icon.svg");
+      background-repeat: no-repeat;
+      background-size: 40% auto;
+      background-position: 50% 50%;
+      transition: background-color $quick-ease;
+
+      @include breakpoint($vp2) {
+        left: span(11);
+      }
+    }
+
+    &:hover {
+      background: darken($tmp-gray, 10%);
+      cursor: pointer;
+    }
+  }
+}

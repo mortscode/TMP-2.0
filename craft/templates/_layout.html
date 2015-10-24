@@ -53,11 +53,14 @@
 
 {% if entry is defined %}
   {% set section = entry.getSection() %}
+  {% if section.handle == 'postEntries' %}
+    {% set recipe = true %}
+  {% endif %}
 {% else %}
   {% set section = 'no-section' %}
 {% endif %}
 
-<body class="tk-fade{% if section.handle == 'postEntries' %} print-styles{% endif %}">
+<body class="tk-fade{% if recipe is defined and true %} print-styles{% endif %}">
   {# HOME INTRO #}
   {% set pageUrl = url(craft.request.path) %}
   {% if pageUrl == siteUrl %}
