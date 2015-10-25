@@ -11,6 +11,10 @@ $(document).ready(function() {
     window.print();
   });
 
+  $(".lazy").lazyload({
+      effect : "fadeIn"
+  });
+
   // Fire callback at beginning of detection period
   $(window).resize(
     debounce(function() {

@@ -27,7 +27,7 @@
         <div class="builder__section--photos {{ block.photoWidth }}">
           {% for photo in block.imageFiles %}
               <div class="image-wrapper {% if block.imageFiles|length >= 2 %}gallery{% endif %} {% if block.mobileStack.contains('stack') %}m-stack{% endif %}">
-                <img class="image" src="{{ photo.url }}" alt="">
+                <img class="image lazy" data-original="{{ photo.url }}" alt="">
               </div>
           {% endfor %}
         </div>

@@ -42,7 +42,6 @@
       @include span(13 wider of 24);
       @include push(1 of 24);
       position: relative;
-      background-color: $white;
 
       @include breakpoint($vp3) {
         @include span(10);

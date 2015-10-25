@@ -42,7 +42,7 @@
         </div>
         {% for entry in entries %}
         <a class="posts__result--item" href="{{ entry.url }}">
-          <div class="posts__result" style="background-image:url('{{ entry.featuredImage.first.url }}');">
+          <div class="posts__result" style="background-image:url('{{ entry.featuredImage.first.url('postImage') }}');">
               <p class="posts__result--date">{{ entry.postDate|date("M j, Y") }}</p>
               <h3 class="posts__result--title">{{ entry.title }}</h3>
           </div>
