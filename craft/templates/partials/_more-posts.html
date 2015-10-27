@@ -10,7 +10,7 @@
     <div class="more-posts__post--wrapper">
       {% for post in similar %}
           <a href="{{ post.url }}" class="more-posts__link">
-            <div class="more-posts__post" style="background-image:url('{{ post.featuredImage.first.url }}');">
+            <div class="more-posts__post" style="background-image:url('{{ post.featuredImage.first.url('smallFeature') }}');">
               <div class="more-posts__post--title">
                 <h3 class="js-avoid-orphan">{{ post.title }}</h3>
               </div>
