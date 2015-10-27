@@ -1721,7 +1721,8 @@ img, picture {
             margin-right: 1.6949152542%;
             margin-left: 8.4745762712%; } }
       .builder__section--photos .image-wrapper {
-        width: 100%; }
+        width: 100%;
+        background-color: white; }
         .builder__section--photos .image-wrapper.gallery {
           width: 50%;
           padding-right: 0.375em;

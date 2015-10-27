@@ -12,7 +12,8 @@ $(document).ready(function() {
   });
 
   $(".lazy").lazyload({
-      effect : "fadeIn"
+      effect : "fadeIn",
+      threshold : 200,
   });
 
   // Fire callback at beginning of detection period

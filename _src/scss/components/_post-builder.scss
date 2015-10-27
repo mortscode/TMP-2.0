@@ -225,6 +225,7 @@
 
       .image-wrapper {
         width: 100%;
+        background-color: lighten($tmp-light, 5%);
 
         &.gallery {
           width: 50%;
