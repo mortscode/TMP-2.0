@@ -1,10 +1,11 @@
 @charset "utf-8";
 
+
+@import "base/variables";
+@import "base/normalize";
 @import "../bower/susy/sass/susy";
 @import "../bower/compass-breakpoint/stylesheets/breakpoint";
 @import "../bower/bourbon/app/assets/stylesheets/bourbon";
-@import "base/variables";
-@import "base/normalize";
 @import "base/base";
 
 // COMPONENTS ============================================

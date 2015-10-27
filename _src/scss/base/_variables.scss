@@ -50,7 +50,7 @@ $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
 // Navicon
-$navi-size: em(18);
+$navi-size: 18px;
 $navi-transition: 0.4s;
 
 // z-index

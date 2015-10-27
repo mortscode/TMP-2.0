@@ -1148,14 +1148,14 @@ img, picture {
     top: 18px;
     background-color: transparent;
     display: inline-block;
-    padding: 0.625em 0.75em;
+    padding: 10px 12px;
     transition: 0.4s;
     cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    border-radius: 0.1607142857em;
+    border-radius: 2.5714285714px;
     outline: none;
     border: none; }
     @media  (max-width: 960px) {
@@ -1170,30 +1170,30 @@ img, picture {
       transition: 0; }
     .mobile-nav .nav-btn .lines {
       display: inline-block;
-      width: 1.125em;
-      height: 0.125em;
+      width: 18px;
+      height: 2px;
       background: #8c928c;
-      border-radius: 0.0803571429em;
+      border-radius: 1.2857142857px;
       transition: 0.4s;
       position: relative;
       /*create the upper and lower lines as pseudo-elements of the middle line*/ }
       .mobile-nav .nav-btn .lines:before, .mobile-nav .nav-btn .lines:after {
         display: inline-block;
-        width: 1.125em;
-        height: 0.125em;
+        width: 18px;
+        height: 2px;
         background: #8c928c;
-        border-radius: 0.0803571429em;
+        border-radius: 1.2857142857px;
         transition: 0.4s;
         position: absolute;
         left: 0;
         content: "";
-        -webkit-transform-origin: 0.0803571429em center;
-            -ms-transform-origin: 0.0803571429em center;
-                transform-origin: 0.0803571429em center; }
+        -webkit-transform-origin: 1.2857142857px center;
+            -ms-transform-origin: 1.2857142857px center;
+                transform-origin: 1.2857142857px center; }
       .mobile-nav .nav-btn .lines:before {
-        top: 0.375em; }
+        top: 6px; }
       .mobile-nav .nav-btn .lines:after {
-        top: -0.375em; }
+        top: -6px; }
       .mobile-nav .nav-btn .lines.close {
         /*hide the middle line*/
         background: transparent;
@@ -1203,7 +1203,7 @@ img, picture {
               -ms-transform-origin: 50% 50%;
                   transform-origin: 50% 50%;
           top: 0;
-          width: 1.125em; }
+          width: 18px; }
         .mobile-nav .nav-btn .lines.close:before {
           -webkit-transform: rotate3d(0, 0, 1, 45deg);
                   transform: rotate3d(0, 0, 1, 45deg); }
