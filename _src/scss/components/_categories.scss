@@ -9,5 +9,6 @@
 
   &__cat-title {
     margin-top: $base-spacing;
+    color: darken($tmp-gray, 10%);
   }
 }
