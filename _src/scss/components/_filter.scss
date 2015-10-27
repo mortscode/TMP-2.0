@@ -1,7 +1,6 @@
 .posts-filter {
-  @include span(22 of 24);
-  @include push(1 of 24);
-  padding-top: $large-spacing;
+  @include full;
+  padding: $large-spacing span(1 of 24) 0;
 
   @include breakpoint($vp2) {
     margin-bottom: -$base-spacing;
@@ -29,15 +28,11 @@
     transition: background $quick-ease;
 
     &__wrapper {
-      @include span(3);
+      @include span(2);
       position: relative;
 
-      @include breakpoint($vp4) {
-        @include span(4);
-      }
-
       @include breakpoint($vp3) {
-        @include span(6 narrow);
+        @include span(4);
       }
 
       @include breakpoint($vp2) {

@@ -8,6 +8,7 @@
 
 {% block content %}
 	<div class="grid">
+
     {% if year is not defined %}
       {% set year = now.year %}
     {% endif %}
@@ -29,6 +30,8 @@
         </select>
       </div>
     </div>
+
+    {% include 'posts/_categories' %}
 
     <div class="posts">
       {# <h1 class="posts__title">{{ year }} Post Archive</h1> #}
