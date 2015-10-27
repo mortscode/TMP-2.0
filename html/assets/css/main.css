@@ -1214,6 +1214,12 @@ img, picture {
 .more-posts {
   padding: 3em 0;
   background-color: #f2f2f2; }
+  .more-posts.full {
+    clear: both;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
   .more-posts__title {
     color: #8c928c;
     margin-bottom: 1.5em;
@@ -2265,6 +2271,32 @@ body {
       margin-left: 16.9491525424%; } }
   @media  (max-width: 600px) {
     .about__body {
+      width: 83.0508474576%;
+      float: left;
+      margin-right: 1.6949152542%;
+      margin-left: 8.4745762712%; } }
+
+.error {
+  width: 32.2033898305%;
+  float: left;
+  margin-right: 1.6949152542%;
+  margin-left: 33.8983050847%;
+  text-align: center;
+  padding: 4.5em 0 0; }
+  @media  (max-width: 1200px) {
+    .error {
+      width: 49.1525423729%;
+      float: left;
+      margin-right: 1.6949152542%;
+      margin-left: 25.4237288136%; } }
+  @media  (max-width: 960px) {
+    .error {
+      width: 66.1016949153%;
+      float: left;
+      margin-right: 1.6949152542%;
+      margin-left: 16.9491525424%; } }
+  @media  (max-width: 600px) {
+    .error {
       width: 83.0508474576%;
       float: left;
       margin-right: 1.6949152542%;

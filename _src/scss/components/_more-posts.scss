@@ -2,6 +2,10 @@
   padding: $large-spacing 0;
   background-color: $tmp-light;
 
+  &.full {
+    @include full;
+  }
+
   &__title {
     color: $tmp-gray;
     margin-bottom: $base-spacing;
