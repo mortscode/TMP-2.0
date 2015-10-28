@@ -20,12 +20,12 @@ return array(
     )
   ),
 
-  'dev.themodernproper.com' => array(
-    'siteUrl' => 'http://dev.themodernproper.com',
+  'themodernproper.com' => array(
+    'siteUrl' => 'http://themodernproper.com',
     'devMode' => false,
     'environmentVariables' => array(
       'basePath' => '/var/www/html/',
-      'baseUrl'  => 'http://dev.themodernproper.com',
+      'baseUrl'  => 'http://themodernproper.com',
     ),
   ),
 );
