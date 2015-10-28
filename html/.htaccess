@@ -3,6 +3,8 @@
 
   #301 Redirects
   RewriteRule ^post\/(\d+)\/(.*)$ http://themodernproper.com/posts/$2 [L,R=301]
+  RewriteRule ^page\/(.*)$ http://themodernproper.com/ [L,R=301]
+  RewriteRule ^post\/(.*)$ http://themodernproper.com/ [L,R=301]
 
   # Send would-be 404 requests to Craft
   RewriteCond %{REQUEST_FILENAME} !-f
