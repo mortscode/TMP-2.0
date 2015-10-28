@@ -1137,8 +1137,8 @@ img, picture {
             background-image: url("/assets/img/icons/pinterest.svg"); }
           .mobile-nav .m-nav-menu .social-links .social-item li.facebook {
             background-image: url("/assets/img/icons/facebook.svg"); }
-          .mobile-nav .m-nav-menu .social-links .social-item li.rss {
-            background-image: url("/assets/img/icons/rss.svg");
+          .mobile-nav .m-nav-menu .social-links .social-item li.feed {
+            background-image: url("/assets/img/icons/feed.svg");
             background-size: 44% 44%;
             background-position: 57% 43%; }
         .mobile-nav .m-nav-menu .social-links .social-item:hover {
@@ -2160,8 +2160,8 @@ body {
           background-image: url("/assets/img/icons/pinterest.svg"); }
         .site-header .social-links .social-list .social-item li.facebook {
           background-image: url("/assets/img/icons/facebook.svg"); }
-        .site-header .social-links .social-list .social-item li.rss {
-          background-image: url("/assets/img/icons/rss.svg");
+        .site-header .social-links .social-list .social-item li.feed {
+          background-image: url("/assets/img/icons/feed.svg");
           background-size: 44% 44%;
           background-position: 57% 43%; }
       .site-header .social-links .social-list .social-item:hover {
