@@ -1139,7 +1139,8 @@ img, picture {
             background-image: url("/assets/img/icons/facebook.svg"); }
           .mobile-nav .m-nav-menu .social-links .social-item li.rss {
             background-image: url("/assets/img/icons/rss.svg");
-            background-position: 55% 45%; }
+            background-size: 44% 44%;
+            background-position: 57% 43%; }
         .mobile-nav .m-nav-menu .social-links .social-item:hover {
           background-color: #8c928c; }
   .mobile-nav .nav-btn {
@@ -2088,7 +2089,7 @@ body {
       .site-header .navigation {
         display: none; } }
     .site-header .navigation .nav-list .search-wrapper {
-      opacity: 0.4;
+      opacity: 0.6;
       transition: opacity 200ms ease-in-out;
       cursor: pointer;
       display: inline-block;
@@ -2161,7 +2162,8 @@ body {
           background-image: url("/assets/img/icons/facebook.svg"); }
         .site-header .social-links .social-list .social-item li.rss {
           background-image: url("/assets/img/icons/rss.svg");
-          background-position: 55% 45%; }
+          background-size: 44% 44%;
+          background-position: 57% 43%; }
       .site-header .social-links .social-list .social-item:hover {
         background-color: #8c928c; }
 

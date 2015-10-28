@@ -73,7 +73,7 @@
     .nav-list {
 
       .search-wrapper {
-        opacity: 0.4;
+        opacity: 0.6;
         transition: opacity $quick-ease;
         cursor: pointer;
         display: inline-block;
@@ -172,7 +172,8 @@
 
           &.rss {
             background-image: url("/assets/img/icons/rss.svg");
-            background-position: 55% 45%;
+            background-size: 44% 44%;
+            background-position: 57% 43%;
           }
         }
 
