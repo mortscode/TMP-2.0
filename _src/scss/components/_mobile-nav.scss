@@ -148,7 +148,7 @@
     transition: $navi-transition;
     cursor: pointer;
     user-select: none;
-    border-radius: $navi-size/7;
+    border-radius: $navi-size / 7;
     outline: none;
     border: none;
 
@@ -182,11 +182,11 @@
         position: absolute;
         left: 0;
         content: "";
-        transform-origin: $navi-size/14 center;
+        transform-origin: $navi-size / 14 center;
       }
 
-      &:before { top: $navi-size/3; }
-      &:after { top: -$navi-size/3; }
+      &:before { top: $navi-size / 3; }
+      &:after { top: -$navi-size / 3; }
 
       &.close {
 

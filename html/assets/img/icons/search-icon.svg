@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
-    <title>search-icon</title>
+    <title>search</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="HOME-PAGE" sketch:type="MSArtboardGroup" transform="translate(-503.000000, -459.000000)" stroke="#212621" stroke-width="3">
-            <g id="intro" sketch:type="MSLayerGroup" transform="translate(51.000000, 218.000000)">
-                <g id="NAV" transform="translate(454.000000, 242.000000)" sketch:type="MSShapeGroup">
-                    <g id="search-icon" transform="translate(0.000000, 1.000000)">
-                        <ellipse id="Oval-1" cx="7.07751565" cy="6.97343454" rx="7.07751565" ry="6.97343454"></ellipse>
-                        <path d="M12.2773231,12.3814042 L19.0797755,19.0838206" id="Line" stroke-linecap="square"></path>
+        <g id="BLOG-POST" sketch:type="MSArtboardGroup" transform="translate(-503.000000, -55.000000)" stroke="#6F7470" stroke-width="3">
+            <g id="top-bar" sketch:type="MSLayerGroup">
+                <g id="NAV" transform="translate(381.000000, 56.000000)" sketch:type="MSShapeGroup">
+                    <g id="search" transform="translate(124.000000, 1.000000)">
+                        <ellipse id="Oval-1" cx="8.84689456" cy="8.71679317" rx="8.84689456" ry="8.71679317"></ellipse>
+                        <path d="M15.3466538,15.4767552 L23.8497194,23.8547757" id="Line" stroke-linecap="square"></path>
                     </g>
                 </g>
             </g>

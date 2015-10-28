@@ -1722,7 +1722,7 @@ img, picture {
             margin-left: 8.4745762712%; } }
       .builder__section--photos .image-wrapper {
         width: 100%;
-        background-color: white; }
+        background-color: rgba(242, 242, 242, 0); }
         .builder__section--photos .image-wrapper.gallery {
           width: 50%;
           padding-right: 0.375em;
@@ -1947,7 +1947,7 @@ img, picture {
   background-size: 40%;
   background-position: 50% 50%;
   background-color: rgba(255, 255, 255, 0);
-  opacity: 0.4;
+  opacity: 0.8;
   transition: opacity 200ms ease-in-out; }
   @media  (max-width: 600px) {
     .m-search-btn {
