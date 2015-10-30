@@ -14,7 +14,7 @@
                 <title>{{ entry.title }}</title>
                 <link>{{ entry.url }}</link>
                 <pubDate>{{ entry.postDate.rss }}</pubDate>
-                <author>{{ entry.postAuthor }}</author>
+                <author>{% if entry.postAuthor|length %}{{ entry.postAuthor }}{% else %}The Modern Proper{% endif %}</author>
                 <guid>{{ entry.url }}</guid>
                 <description><![CDATA[
                     {{ entry.postSummary }}
