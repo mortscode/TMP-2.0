@@ -17,6 +17,7 @@
   RewriteRule ^post\/114668933189\/(.*)$ http://themodernproper.com/posts/spring-salad-with-barley-and-lemon-chive-vinaigrette [L,R=301]
 
   #301 Redirects
+  RewriteRule ^post\/(\d+)\/(.*)$ http://themodernproper.com/posts/$2 [L,R=301]
   RewriteRule ^page\/(.*)$ http://themodernproper.com/ [L,R=301]
   RewriteRule ^tagged\/(.*)$ http://themodernproper.com/posts [L,R=301]
 
