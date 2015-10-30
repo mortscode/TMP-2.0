@@ -1,10 +1,6 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  http://themodernproper.com/post/116034406967/yogurt-and-olive-oil-pistachio-cake-with-lemon
-  http://themodernproper.com/post/115422693227/roasted-artichoke-stuffed-with-garlic-lemon-and
-  http://themodernproper.com/post/114668933189/spring-salad-with-barley-and-lemon-chive
-
   #301 Specific Posts
   RewriteRule ^post\/130835012447\/(.*)$ http://themodernproper.com/posts/grilled-ham-and-cheese-sandwich-with-red-pepper-jelly [L,R=301]
   RewriteRule ^post\/128113497737\/(.*)$ http://themodernproper.com/posts/grilled-peaches-with-vanilla-sour-cream-orange-whisky-caramel [L,R=301]
