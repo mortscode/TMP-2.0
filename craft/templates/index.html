@@ -17,7 +17,13 @@
     {# {% set posts = craft.entries.section('posts') %} #}
     {% for post in posts %}
       <article class="post-summary">
-        <div class="post-image-wrapper"><a href="{{ post.url }}"><img class="post-image lazy" data-original="{{ post.featuredImage.first.url('homeFeature') }}" alt=""></a></div>
+        <div class="post-image-wrapper"><a href="{{ post.url }}">
+          {% if loop.first %}
+            <img class="post-image" src="{{ post.featuredImage.first.url('homeFeature') }}" alt="{{ post.title }}">
+          {% else %}
+            <img class="post-image lazy" data-original="{{ post.featuredImage.first.url('homeFeature') }}" alt="{{ post.title }}">
+          {% endif %}
+          </a></div>
         <div class="post-description">
           <h3 class="post-date">{{ post.postDate|date("F j, Y") }}</h3>
           <a href="{{ post.url }}"><h2 class="post-title">{{ post.title }}</h2></a>
