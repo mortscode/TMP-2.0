@@ -21,7 +21,7 @@
           {% include 'partials/_share' %}
         </div>
       <div class="post__image--wrapper">
-        <img src="{{ entry.featuredImage.first.url('homeFeature') }}" alt="" class="post__image">
+        <img src="{{ entry.featuredImage.first.url('homeFeature') }}" alt="{{ entry.title }}" class="post__image">
       </div>
 
       {% if entry.postAuthor|length %}
