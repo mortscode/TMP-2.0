@@ -23,13 +23,13 @@
     <input id="fromName" type="text" name="fromName" value="{% if message is defined %}{{ message.fromName }}{% endif %}" autofocus="autofocus" placeholder="Your name">
 
     {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
-    <input id="fromEmail" type="text" name="fromEmail" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}" placeholder="Your email">
+    <input id="fromEmail" type="text" name="message[email]" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}" placeholder="Your email">
 
     {{ message is defined and message ? errorList(message.getErrors('subject')) }}
     <input id="subject" type="text" name="subject" value="{% if message is defined %}{{ message.subject }}{% endif %}" placeholder="Message subject">
 
     {{ message is defined and message ? errorList(message.getErrors('message')) }}
-    <textarea rows="10" cols="40" id="message" name="message" placeholder="Your message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
+    <textarea rows="10" cols="40" id="message" name="message[body]" placeholder="Your message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
 
     <input id="recipes" name="recipes" type="text">
 
