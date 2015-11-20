@@ -31,7 +31,7 @@
     {{ message is defined and message ? errorList(message.getErrors('message')) }}
     <textarea rows="10" cols="40" id="message" name="message[body]" placeholder="Your message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
 
-    <textarea class="-hide" name="message[Email]" >{% if message is defined %}{{ message.fromEmail }}{% endif %}</textarea>
+    <input id="email" class="-hide" name="message[Email]" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}">
 
     <input id="recipes" name="recipes" type="text">
 
