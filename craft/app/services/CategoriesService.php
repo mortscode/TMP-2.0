@@ -6,8 +6,8 @@ namespace Craft;
  *
  * @author    Pixel & Tonic, Inc. <support@pixelandtonic.com>
  * @copyright Copyright (c) 2014, Pixel & Tonic, Inc.
- * @license   http://buildwithcraft.com/license Craft License Agreement
- * @see       http://buildwithcraft.com
+ * @license   http://craftcms.com/license Craft License Agreement
+ * @see       http://craftcms.com
  * @package   craft.app.services
  * @since     2.0
  */
@@ -342,17 +342,24 @@ class CategoriesService extends BaseApplicationComponent
 				$groupRecord->structureId = $structure->id;
 				$group->structureId = $structure->id;
 
-				// Create and set the field layout
-
-				if (!$isNewCategoryGroup && $oldCategoryGroup->fieldLayoutId)
-				{
-					craft()->fields->deleteLayoutById($oldCategoryGroup->fieldLayoutId);
-				}
-
+				// Is there a new field layout?
 				$fieldLayout = $group->getFieldLayout();
-				craft()->fields->saveLayout($fieldLayout);
-				$groupRecord->fieldLayoutId = $fieldLayout->id;
-				$group->fieldLayoutId = $fieldLayout->id;
+
+				if (!$fieldLayout->id)
+				{
+					// Delete the old one
+					if (!$isNewCategoryGroup && $oldCategoryGroup->fieldLayoutId)
+					{
+						craft()->fields->deleteLayoutById($oldCategoryGroup->fieldLayoutId);
+					}
+
+					// Save the new one
+					craft()->fields->saveLayout($fieldLayout);
+
+					// Update the category group record/model with the new layout ID
+					$groupRecord->fieldLayoutId = $fieldLayout->id;
+					$group->fieldLayoutId = $fieldLayout->id;
+				}
 
 				// Save the category group
 				$groupRecord->save(false);

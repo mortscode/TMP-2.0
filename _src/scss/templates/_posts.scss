@@ -107,7 +107,7 @@
       transition: color $quick-ease;
 
       @include breakpoint($vp2) {
-        padding: span(1.5) span(1);
+        padding: span(1);
         line-height: 1.2;
         width: auto;
         top: auto;
@@ -116,6 +116,7 @@
         right: 0;
         transform: none;
         background-color: rgba($white, 0.95);
+        font-size: 90%;
         color: $tmp-dark;
         border-bottom: 1px solid $tmp-gray;
       }
