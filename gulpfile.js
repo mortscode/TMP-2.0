@@ -15,6 +15,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
+var sass = require('gulp-sass');
 var reload = browserSync.reload;
 
 var AUTOPREFIXER_BROWSERS = [
@@ -74,6 +75,7 @@ gulp.task('styles', function () {
     }))
     .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
     // Concatenate and minify styles
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(gulp.dest('html/assets/css'))
     .pipe($.size({title: 'styles'}))
     .pipe($.livereload());
@@ -108,7 +110,7 @@ gulp.task('sync', ['styles', 'scripts'], function () {
 
 // Watch Files For Changes & Reload
 // Uncomment proxy and change to dev site local url
-gulp.task('default', ['styles', 'scripts', 'html'], function () {
+gulp.task('default', ['styles', 'scripts-min', 'html'], function () {
 
   $.livereload.listen();
 

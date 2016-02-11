@@ -8,9 +8,12 @@
     {% endif %}
     <div class="about-img" style="background-image:url('{{ asideColumn.asidePhoto.first.url('asidePhoto') }}');"></div>
     <h3 class="aside-title">{{ asideColumn.asideTitle }}</span></h3>
-    <p class="aside-blurb caption js-avoid-orphan">{{ asideColumn.asideBlurb }}</p>
+    <p class="aside-blurb js-avoid-orphan">{{ asideColumn.asideBlurb }}</p>
     {# <a href="/about"><div class="btn aside gray buffer-bottom">About us</div></a> #}
     <a href="/contact"><div class="btn aside pop">Contact us</div></a>
+    {% if pageUrl == siteUrl %}
+      {% include 'partials/_newsletter' %}
+    {% endif %}
   </section>
   {% if featured == "true" %}
     {% include 'partials/_featured' %}
