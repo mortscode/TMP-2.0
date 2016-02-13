@@ -80,9 +80,8 @@
   }
 
   .newsletter {
-    margin: $large-spacing auto;
+    margin: $large-spacing auto 0;
     border-top: 1px solid rgba($tmp-gray, 0.7);
-    border-bottom: 1px solid rgba($tmp-gray, 0.7);
     padding: $large-spacing 0;
 
     .email-input {
@@ -112,8 +111,8 @@
   }
 
   .featured {
-    background-color: $white;
-    padding: $small-spacing;
+    padding: $large-spacing 0;
+    border-top: 1px solid rgba($tmp-gray, 0.7);
 
     &__post {
       position: relative;
@@ -123,7 +122,7 @@
       &:after {
         content: "";
         display: block;
-        padding-top: 120%;
+        padding-top: 140%;
       }
 
       &:hover {
@@ -154,7 +153,6 @@
         padding: $small-spacing;
         font-size: rem(14);
         line-height: rem(18);
-        font-family: $sans;
         transition: background-color $quick-ease;
 
         @include breakpoint($vp4) {

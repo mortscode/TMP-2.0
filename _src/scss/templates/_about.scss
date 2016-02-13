@@ -1,10 +1,15 @@
 .about {
   &__image {
-    @include span(8);
-    @include push(2);
+    @include span(6);
+    @include push(3);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+
+    @include breakpoint($vp4) {
+      @include span(8);
+      @include push(2);
+    }
 
     @include breakpoint($vp3) {
       @include span(10);
@@ -26,7 +31,13 @@
   &__body {
     @include span(6);
     @include push(3);
-    margin-top: $large-spacing;
+    margin-top: $base-spacing;
+    margin-bottom: $large-spacing;
+    padding: 0 $large-spacing;
+
+    @include breakpoint($vp4) {
+      padding: 0;
+    }
 
     @include breakpoint($vp3) {
       @include span(8);

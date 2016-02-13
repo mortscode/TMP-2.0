@@ -31,8 +31,6 @@
     background-size: 50% auto;
     background-position: 0 50%;
     background-repeat: no-repeat;
-    filter: grayscale(0.3);
-    transition: filter $quick-ease;
 
     @include breakpoint($vp2) {
       background-size: cover;
@@ -40,7 +38,6 @@
     }
 
     &:hover {
-      filter: grayscale(0);
 
       .posts__result--title {
         color: darken($tmp-brand, 15%);
@@ -74,10 +71,11 @@
     &--item {
       @include gallery(4);
       position: relative;
-      margin-bottom: gutter(6);
+      margin-bottom: gutter(12);
 
       @include breakpoint($vp4) {
         @include gallery(3 of 6);
+        margin-bottom: gutter(6);
       }
 
       &:after {
