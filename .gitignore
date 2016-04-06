@@ -12,6 +12,7 @@ craft/storage/
 html/assets/uploads/*
 node_modules/
 data/
+zz-archive/
 
 # Misc files
 # ----------------------------------------------------------------------
